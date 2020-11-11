@@ -8,5 +8,11 @@ sudo apt install git-lfs
 git lfs install
 ```
 
+Setting up python:
+
+``` cmd
+pip3 install msgpack-rpc-python airsim gym
+```
+
 ## Running
 
