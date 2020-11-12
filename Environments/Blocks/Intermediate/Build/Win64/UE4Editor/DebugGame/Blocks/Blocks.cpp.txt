@@ -1,2 +1,0 @@
-D:\git\school\deep_flight\Environments\Blocks\Intermediate\Build\Win64\UE4Editor\DebugGame\Blocks\Definitions.Blocks.h
-D:\git\school\deep_flight\Environments\Blocks\Source\Blocks\Blocks.h

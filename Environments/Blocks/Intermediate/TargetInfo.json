@@ -2,12 +2,12 @@
 	"Targets": [
 		{
 			"Name": "Blocks",
-			"Path": "D:\\git\\external\\AirSim\\Unreal\\Environments\\Blocks\\Source\\Blocks.Target.cs",
+			"Path": "D:\\git\\school\\deep_flight\\Environments\\Blocks\\Source\\Blocks.Target.cs",
 			"Type": "Game"
 		},
 		{
 			"Name": "BlocksEditor",
-			"Path": "D:\\git\\external\\AirSim\\Unreal\\Environments\\Blocks\\Source\\BlocksEditor.Target.cs",
+			"Path": "D:\\git\\school\\deep_flight\\Environments\\Blocks\\Source\\BlocksEditor.Target.cs",
 			"Type": "Editor"
 		}
 	]
