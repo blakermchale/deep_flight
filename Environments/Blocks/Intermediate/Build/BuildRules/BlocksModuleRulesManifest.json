@@ -1,9 +1,0 @@
-{
-	"SourceFiles": [
-		"D:\\git\\school\\deep_flight\\Environments\\Blocks\\Source\\Blocks\\Blocks.Build.cs",
-		"D:\\git\\school\\deep_flight\\Environments\\Blocks\\Plugins\\AirSim\\Source\\AirSim.Build.cs",
-		"D:\\git\\school\\deep_flight\\Environments\\Blocks\\Source\\Blocks.Target.cs",
-		"D:\\git\\school\\deep_flight\\Environments\\Blocks\\Source\\BlocksEditor.Target.cs"
-	],
-	"EngineVersion": "4.24.3"
-}
