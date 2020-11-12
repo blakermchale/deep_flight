@@ -6,8 +6,6 @@ import random
 import gym
 from gym import spaces
 from gym.utils import seeding
-from gym.spaces import Tuple, Box, Discrete, MultiDiscrete, Dict
-from gym.spaces.box import Box
 
 logger = logging.getLogger(__name__)
 
@@ -18,15 +16,15 @@ class AirSimEnv(gym.Env):
         pass
         
         
-    def _seed(self, seed=None):
+    def seed(self, seed=None):
         self.np_random, seed = seeding.np_random(seed)
         return [seed]
     
-    def _step(self, action):
+    def step(self, action):
 
         return self.state, reward, done, info
         
-    def _reset(self):
+    def reset(self):
         """
         Resets the state of the environment and returns an initial observation.
         """
