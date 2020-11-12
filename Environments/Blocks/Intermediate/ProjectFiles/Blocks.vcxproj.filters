@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Blocks.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{A0EAF8C1-B241-4E10-9092-77E43C0A8EAE}</UniqueIdentifier>
+      <UniqueIdentifier>{16EE57FE-A7DE-4A3E-B429-5B18E1A2F2A2}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Blocks.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,6 @@
       <Filter>Source</Filter>
     </None>
     <None Include="..\..\.gitignore" />
-    <None Include="..\..\.ignoregit" />
     <None Include="..\..\clean.bat" />
     <None Include="..\..\clean.sh" />
     <None Include="..\..\GenerateProjectFiles.bat" />
@@ -24,7 +23,7 @@
     <None Include="..\..\update_to_git.bat" />
     <None Include="..\..\update_to_git.sh" />
     <Filter Include="Config">
-      <UniqueIdentifier>{A2A7E208-8AC3-431A-B9ED-142300EE287A}</UniqueIdentifier>
+      <UniqueIdentifier>{DFEEFED6-34F6-45F6-9AC6-DAA1D8477FC8}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -45,13 +44,13 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Plugins">
-      <UniqueIdentifier>{C4CC47E9-F499-45AD-924E-4ADED081EBB5}</UniqueIdentifier>
+      <UniqueIdentifier>{FCC8B750-9B92-4E6E-92C9-CC5B12DE771D}</UniqueIdentifier>
     </Filter>
     <Filter Include="Plugins\AirSim">
-      <UniqueIdentifier>{5C8A352C-363D-4634-ADAC-AD9E328232B7}</UniqueIdentifier>
+      <UniqueIdentifier>{F96ED686-3207-45A8-B3BD-0D40CA35FE59}</UniqueIdentifier>
     </Filter>
     <Filter Include="Plugins\AirSim\Source">
-      <UniqueIdentifier>{46D441F5-D161-48B4-963C-DD569BF68BF7}</UniqueIdentifier>
+      <UniqueIdentifier>{C21E1245-8AB0-409F-9A7F-AC02F268A1B2}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Plugins\AirSim\Source\AirBlueprintLib.cpp">
       <Filter>Plugins\AirSim\Source</Filter>
@@ -141,7 +140,7 @@
       <Filter>Plugins\AirSim\Source</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib">
-      <UniqueIdentifier>{3536709E-5200-4EB4-8F71-31AEDF90B610}</UniqueIdentifier>
+      <UniqueIdentifier>{2694A05E-9649-4B9D-8DBC-4A85C5794E3B}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\.gitignore">
       <Filter>Plugins\AirSim\Source\AirLib</Filter>
@@ -150,13 +149,13 @@
       <Filter>Plugins\AirSim\Source\AirLib</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps">
-      <UniqueIdentifier>{EE6C2287-604B-4A8A-B0FF-109F5C0E39E9}</UniqueIdentifier>
+      <UniqueIdentifier>{75836D2A-BAF7-4C1B-A791-1EE371A7C75E}</UniqueIdentifier>
     </Filter>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\eigen3">
-      <UniqueIdentifier>{6AE12B10-94E3-484F-BCCA-D448829465F3}</UniqueIdentifier>
+      <UniqueIdentifier>{069D87AA-D6A5-49FE-9B72-25F26D91F788}</UniqueIdentifier>
     </Filter>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen">
-      <UniqueIdentifier>{05C4A8DA-E0E6-4EF7-AA2F-04783E1BB7F9}</UniqueIdentifier>
+      <UniqueIdentifier>{26B8B6E1-B278-4174-B9C1-9145C2910AA7}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\Cholesky">
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen</Filter>
@@ -249,10 +248,10 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src">
-      <UniqueIdentifier>{55F9ADF1-528A-4594-9CC7-235A0325A2BA}</UniqueIdentifier>
+      <UniqueIdentifier>{482D4854-D872-412C-A1A2-B9DD46BFC79F}</UniqueIdentifier>
     </Filter>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Cholesky">
-      <UniqueIdentifier>{890F3F35-7D1D-494C-9EF1-ACC3EDC2D597}</UniqueIdentifier>
+      <UniqueIdentifier>{A198B09E-7083-494F-A658-82B50AD61B15}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Cholesky\LDLT.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Cholesky</Filter>
@@ -264,13 +263,13 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Cholesky</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\CholmodSupport">
-      <UniqueIdentifier>{CEBC47BB-F7DD-4D17-B8D6-6D3B55A1200B}</UniqueIdentifier>
+      <UniqueIdentifier>{9678E2A7-D4A7-4E1C-8415-F8920211A0C0}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\CholmodSupport\CholmodSupport.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\CholmodSupport</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Core">
-      <UniqueIdentifier>{94A63930-B412-4144-A43D-28FD09569335}</UniqueIdentifier>
+      <UniqueIdentifier>{CB9A87A1-6E0D-4EB1-9A5E-BA4820D33930}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Core\Array.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Core</Filter>
@@ -474,10 +473,10 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Core</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Core\arch">
-      <UniqueIdentifier>{DC3C20BC-802E-4EB8-94D2-A1A2FD5B2C29}</UniqueIdentifier>
+      <UniqueIdentifier>{D651E3C0-DBCA-4703-802C-63F6865B6B05}</UniqueIdentifier>
     </Filter>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Core\arch\AltiVec">
-      <UniqueIdentifier>{49BA4DCD-7FB9-4597-830D-9A7700AA515A}</UniqueIdentifier>
+      <UniqueIdentifier>{32A36266-882F-4C0A-91F5-CCAE5F3EF79F}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Core\arch\AltiVec\Complex.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Core\arch\AltiVec</Filter>
@@ -489,7 +488,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Core\arch\AltiVec</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Core\arch\AVX">
-      <UniqueIdentifier>{40D70173-01DB-463D-AB5A-870CD78763F1}</UniqueIdentifier>
+      <UniqueIdentifier>{80B9FFF1-65C7-4634-AF04-80DD994DD844}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Core\arch\AVX\Complex.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Core\arch\AVX</Filter>
@@ -504,7 +503,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Core\arch\AVX</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Core\arch\AVX512">
-      <UniqueIdentifier>{B8E8ECA3-5F31-4B0E-A20A-27DF0392FF7E}</UniqueIdentifier>
+      <UniqueIdentifier>{EAE2029C-1F13-4EA5-B333-B1231CE9B76B}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Core\arch\AVX512\MathFunctions.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Core\arch\AVX512</Filter>
@@ -513,7 +512,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Core\arch\AVX512</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Core\arch\CUDA">
-      <UniqueIdentifier>{48774590-4D91-42E9-B30F-0E1660D6F94E}</UniqueIdentifier>
+      <UniqueIdentifier>{542E460A-9BB9-426E-972C-409A402698C1}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Core\arch\CUDA\Complex.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Core\arch\CUDA</Filter>
@@ -534,7 +533,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Core\arch\CUDA</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Core\arch\Default">
-      <UniqueIdentifier>{4FB63254-097E-4BA6-A8BE-2E5ED5CA58C4}</UniqueIdentifier>
+      <UniqueIdentifier>{379BB8CF-EAB9-4411-9657-513446A9CE5F}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Core\arch\Default\ConjHelper.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Core\arch\Default</Filter>
@@ -543,7 +542,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Core\arch\Default</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Core\arch\NEON">
-      <UniqueIdentifier>{2E643F80-AB31-4335-A9E2-A2C5A8EDAEB5}</UniqueIdentifier>
+      <UniqueIdentifier>{7A9107B1-8701-4CA3-A904-7CAEC55ACFD2}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Core\arch\NEON\Complex.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Core\arch\NEON</Filter>
@@ -555,7 +554,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Core\arch\NEON</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Core\arch\SSE">
-      <UniqueIdentifier>{61618A3B-DAD7-4F29-B5C2-60810B3886B6}</UniqueIdentifier>
+      <UniqueIdentifier>{27B3AB0C-6E69-41BA-A0CF-5B5211D95844}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Core\arch\SSE\Complex.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Core\arch\SSE</Filter>
@@ -570,7 +569,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Core\arch\SSE</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Core\arch\ZVector">
-      <UniqueIdentifier>{36E6C8E9-8F02-415F-8B24-3D3B7F2CFDCD}</UniqueIdentifier>
+      <UniqueIdentifier>{DDAD98A4-466F-431C-9E11-89289217F941}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Core\arch\ZVector\Complex.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Core\arch\ZVector</Filter>
@@ -582,7 +581,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Core\arch\ZVector</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Core\functors">
-      <UniqueIdentifier>{FE634B51-B0DE-448B-9CF2-36B92C39498C}</UniqueIdentifier>
+      <UniqueIdentifier>{ECA3EB46-2A8D-4D88-95A6-6774FB584112}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Core\functors\AssignmentFunctors.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Core\functors</Filter>
@@ -603,7 +602,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Core\functors</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Core\products">
-      <UniqueIdentifier>{C35E494F-5C92-44D0-B3B7-CA7F5052761A}</UniqueIdentifier>
+      <UniqueIdentifier>{EBAB0719-74B6-4C75-A531-0862F543055F}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Core\products\GeneralBlockPanelKernel.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Core\products</Filter>
@@ -669,7 +668,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Core\products</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Core\util">
-      <UniqueIdentifier>{985F6143-0DF7-4538-865B-EAFECE8CC118}</UniqueIdentifier>
+      <UniqueIdentifier>{58205838-01D1-4455-BBAD-271C2C489E63}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Core\util\BlasUtil.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Core\util</Filter>
@@ -708,7 +707,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Core\util</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Eigenvalues">
-      <UniqueIdentifier>{F5C00869-7193-469E-A171-C39A73C91A78}</UniqueIdentifier>
+      <UniqueIdentifier>{19490D1A-D41D-47BE-AE01-0237342923C4}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Eigenvalues\ComplexEigenSolver.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Eigenvalues</Filter>
@@ -753,7 +752,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Eigenvalues</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Geometry">
-      <UniqueIdentifier>{A7AEB06E-FBFE-46D2-9852-671B95EC7D91}</UniqueIdentifier>
+      <UniqueIdentifier>{A25BCB56-3122-43B2-A001-77908F013B2B}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Geometry\AlignedBox.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Geometry</Filter>
@@ -798,13 +797,13 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Geometry</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Geometry\arch">
-      <UniqueIdentifier>{F30CCE3B-6C72-4D1A-8FF9-26303CCB1E02}</UniqueIdentifier>
+      <UniqueIdentifier>{B197DE64-EBD2-4066-B5D8-B9E68203C5FD}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Geometry\arch\Geometry_SSE.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Geometry\arch</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Householder">
-      <UniqueIdentifier>{42DEBE65-F591-4B7D-BF5A-E1583B08FF28}</UniqueIdentifier>
+      <UniqueIdentifier>{07191F44-0B34-412F-B045-C4995BD67BB8}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Householder\BlockHouseholder.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Householder</Filter>
@@ -816,7 +815,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Householder</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\IterativeLinearSolvers">
-      <UniqueIdentifier>{4038AFA7-FC7C-4026-930A-A6BEB690FA42}</UniqueIdentifier>
+      <UniqueIdentifier>{E2E0B492-0167-43DB-980D-B17D367BD4B4}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\IterativeLinearSolvers\BasicPreconditioners.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\IterativeLinearSolvers</Filter>
@@ -843,13 +842,13 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\IterativeLinearSolvers</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Jacobi">
-      <UniqueIdentifier>{891C8C90-3FC6-4431-8831-F31529C0E819}</UniqueIdentifier>
+      <UniqueIdentifier>{DA1EF0F8-EE27-4C18-BA9A-EC62806070ED}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Jacobi\Jacobi.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\Jacobi</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\LU">
-      <UniqueIdentifier>{04385FBC-8B1F-4A11-8161-D7C0F536C41F}</UniqueIdentifier>
+      <UniqueIdentifier>{BCF1B6C9-083D-4A76-BC46-DB503804C930}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\LU\Determinant.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\LU</Filter>
@@ -867,19 +866,19 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\LU</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\LU\arch">
-      <UniqueIdentifier>{B486DB02-CA6E-48CB-9B76-D7D6D7F50A12}</UniqueIdentifier>
+      <UniqueIdentifier>{57E036AD-46CA-4BAC-B3E0-214E82345BC6}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\LU\arch\Inverse_SSE.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\LU\arch</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\MetisSupport">
-      <UniqueIdentifier>{71DF9E82-C146-49CC-9716-ADEEFF469BCF}</UniqueIdentifier>
+      <UniqueIdentifier>{CA5314EA-EF27-4E7D-B674-594198552E23}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\MetisSupport\MetisSupport.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\MetisSupport</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\misc">
-      <UniqueIdentifier>{6E671F3C-8262-4804-B7A1-8E4CE458C71F}</UniqueIdentifier>
+      <UniqueIdentifier>{00D2DACD-CBD2-463C-B7B8-E3811AFC849E}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\misc\blas.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\misc</Filter>
@@ -903,7 +902,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\misc</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\OrderingMethods">
-      <UniqueIdentifier>{7F28BADC-127B-4098-A593-65F6B271BEA9}</UniqueIdentifier>
+      <UniqueIdentifier>{439C8A1A-70C2-43BB-A6A2-1C0AB9C7E05B}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\OrderingMethods\Amd.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\OrderingMethods</Filter>
@@ -915,19 +914,19 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\OrderingMethods</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\PardisoSupport">
-      <UniqueIdentifier>{44AC6B75-DC03-4CBF-BF19-D08DA63F031C}</UniqueIdentifier>
+      <UniqueIdentifier>{E254EF86-C648-43CA-8051-D50607E72013}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\PardisoSupport\PardisoSupport.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\PardisoSupport</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\PaStiXSupport">
-      <UniqueIdentifier>{BB15A17C-5A3F-4E2F-B9C6-FD3B11398D27}</UniqueIdentifier>
+      <UniqueIdentifier>{F06D2DD9-AA5F-47BC-9A0A-A36BEED3A99C}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\PaStiXSupport\PaStiXSupport.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\PaStiXSupport</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\plugins">
-      <UniqueIdentifier>{E7D95947-1AE1-4EF0-8FAA-039B9C6B4743}</UniqueIdentifier>
+      <UniqueIdentifier>{723F65AD-31D6-45DA-89FD-A5E99F25F7FC}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\plugins\ArrayCwiseBinaryOps.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\plugins</Filter>
@@ -951,7 +950,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\plugins</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\QR">
-      <UniqueIdentifier>{2C9C8B2E-1D14-4B9E-A0F0-DF02AD641573}</UniqueIdentifier>
+      <UniqueIdentifier>{D7BFFD0A-D086-4BC5-A688-51F8244F8777}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\QR\ColPivHouseholderQR.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\QR</Filter>
@@ -972,7 +971,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\QR</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\SparseCholesky">
-      <UniqueIdentifier>{E92D219A-540D-4E66-AEA1-A761FAF7B980}</UniqueIdentifier>
+      <UniqueIdentifier>{5D36C766-A77E-4BC7-AC1E-B10CD56CB00B}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\SparseCholesky\SimplicialCholesky.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\SparseCholesky</Filter>
@@ -981,7 +980,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\SparseCholesky</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\SparseCore">
-      <UniqueIdentifier>{616B825A-26BE-4D97-8685-3960DD7CB569}</UniqueIdentifier>
+      <UniqueIdentifier>{FC566225-CD2E-41EA-BE00-1F1CA235844E}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\SparseCore\AmbiVector.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\SparseCore</Filter>
@@ -1074,7 +1073,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\SparseCore</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\SparseLU">
-      <UniqueIdentifier>{92F16AB7-CE77-46C1-8BC5-B79E68A47B2C}</UniqueIdentifier>
+      <UniqueIdentifier>{AA044052-379E-4749-AFB0-41995DD875F8}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\SparseLU\SparseLU.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\SparseLU</Filter>
@@ -1128,19 +1127,19 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\SparseLU</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\SparseQR">
-      <UniqueIdentifier>{63BB5881-7FD7-445A-A1E0-47067FDFF928}</UniqueIdentifier>
+      <UniqueIdentifier>{DDE5B070-970C-440B-A02F-E101FD5F912B}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\SparseQR\SparseQR.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\SparseQR</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\SPQRSupport">
-      <UniqueIdentifier>{EA7CB055-D9F7-4DF7-B8AA-30978C99295F}</UniqueIdentifier>
+      <UniqueIdentifier>{35D77722-35A8-42F8-8EDD-7401CBC49793}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\SPQRSupport\SuiteSparseQRSupport.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\SPQRSupport</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\StlSupport">
-      <UniqueIdentifier>{AAEAEE83-0CA9-4317-9A6F-F817DE7C133B}</UniqueIdentifier>
+      <UniqueIdentifier>{DA6A85C5-9F7E-4958-BB3B-9E522DD1FA80}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\StlSupport\details.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\StlSupport</Filter>
@@ -1155,13 +1154,13 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\StlSupport</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\SuperLUSupport">
-      <UniqueIdentifier>{377CCF00-5331-47DD-87B1-BC2E437BF5BC}</UniqueIdentifier>
+      <UniqueIdentifier>{23A358F1-3586-49BF-ACAB-6DB37CD386AC}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\SuperLUSupport\SuperLUSupport.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\SuperLUSupport</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\SVD">
-      <UniqueIdentifier>{08817B84-D4C1-4D25-8C1B-B5B83AC8114A}</UniqueIdentifier>
+      <UniqueIdentifier>{73D70989-0174-4C17-B73A-0CAFE39D3F15}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\SVD\BDCSVD.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\SVD</Filter>
@@ -1179,16 +1178,16 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\SVD</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\UmfPackSupport">
-      <UniqueIdentifier>{947F3A9C-EF06-44BB-B51A-BE913979071D}</UniqueIdentifier>
+      <UniqueIdentifier>{D4447617-8EDF-4324-9CA1-7D6D590799E9}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\UmfPackSupport\UmfPackSupport.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\eigen3\Eigen\src\UmfPackSupport</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\MavLinkCom">
-      <UniqueIdentifier>{E8D00D14-2358-4028-B5C7-E10456142490}</UniqueIdentifier>
+      <UniqueIdentifier>{380F828D-DA6A-4BF3-BC16-ECAEB84BBD2B}</UniqueIdentifier>
     </Filter>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\MavLinkCom\include">
-      <UniqueIdentifier>{C9C0E849-03C2-4199-B133-F1F50B9284AC}</UniqueIdentifier>
+      <UniqueIdentifier>{650D354D-EF49-4FF3-95EA-04244C5DEBA2}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\MavLinkCom\include\AdHocConnection.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\MavLinkCom\include</Filter>
@@ -1233,13 +1232,13 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\MavLinkCom\include</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\MavLinkCom\lib">
-      <UniqueIdentifier>{F9F647DB-CE15-4BCA-8F68-CB25877DCCB8}</UniqueIdentifier>
+      <UniqueIdentifier>{D7A97B69-D947-45CD-898E-EEA7BEEB7D0E}</UniqueIdentifier>
     </Filter>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\MavLinkCom\lib\x64">
-      <UniqueIdentifier>{357B6F07-4E99-40DE-9154-A61768F9D0E6}</UniqueIdentifier>
+      <UniqueIdentifier>{EF017038-8ED8-4C18-AF4D-AFCE7177EA4E}</UniqueIdentifier>
     </Filter>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\MavLinkCom\lib\x64\Debug">
-      <UniqueIdentifier>{4783E91E-EB9D-4F7D-B2E3-AA94C8E2722B}</UniqueIdentifier>
+      <UniqueIdentifier>{FC4F879A-3797-4F9A-A68D-7C8D12FF6BB6}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\MavLinkCom\lib\x64\Debug\MavLinkCom.bsc">
       <Filter>Plugins\AirSim\Source\AirLib\deps\MavLinkCom\lib\x64\Debug</Filter>
@@ -1251,7 +1250,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\MavLinkCom\lib\x64\Debug</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\MavLinkCom\lib\x64\Release">
-      <UniqueIdentifier>{D291B688-2BE0-466A-A944-BD04312B1660}</UniqueIdentifier>
+      <UniqueIdentifier>{5115955E-3C03-45F6-A297-9E056BD160AD}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\MavLinkCom\lib\x64\Release\MavLinkCom.bsc">
       <Filter>Plugins\AirSim\Source\AirLib\deps\MavLinkCom\lib\x64\Release</Filter>
@@ -1260,13 +1259,13 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\MavLinkCom\lib\x64\Release</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib">
-      <UniqueIdentifier>{8386D697-A730-4747-9AF4-5E3DF7B43A3B}</UniqueIdentifier>
+      <UniqueIdentifier>{C7800A0A-33F4-48A2-95EC-13596C8A4AEB}</UniqueIdentifier>
     </Filter>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include">
-      <UniqueIdentifier>{CB0B0109-2AEF-4F55-9091-A4739A6C1D5F}</UniqueIdentifier>
+      <UniqueIdentifier>{9B2CB68D-4A4A-4996-9635-C65F1E61E5AC}</UniqueIdentifier>
     </Filter>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc">
-      <UniqueIdentifier>{62264689-36C8-488A-B592-A25786005F92}</UniqueIdentifier>
+      <UniqueIdentifier>{5400C22D-7CC6-4F0F-B0AF-E9F67A68520F}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\client.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc</Filter>
@@ -1317,7 +1316,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\detail">
-      <UniqueIdentifier>{19003647-D9E7-425C-B5B8-D18E706C3A94}</UniqueIdentifier>
+      <UniqueIdentifier>{4ED1C371-EE6C-4DE3-B415-881B4FB604D3}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\detail\all.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\detail</Filter>
@@ -1383,7 +1382,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\detail</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack">
-      <UniqueIdentifier>{91E08334-C59C-43F2-A1BE-DC6D483F7F17}</UniqueIdentifier>
+      <UniqueIdentifier>{24694582-3DAC-453B-B86E-21E56DCA12BE}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\cpp_config.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack</Filter>
@@ -1533,7 +1532,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\adaptor">
-      <UniqueIdentifier>{DB508EED-5D51-459A-BAE6-44F8D8FC7B94}</UniqueIdentifier>
+      <UniqueIdentifier>{67562BA4-8C70-4661-AE8A-8805479473FB}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\adaptor\adaptor_base.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\adaptor</Filter>
@@ -1653,7 +1652,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\adaptor</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\adaptor\boost">
-      <UniqueIdentifier>{6EB61C33-287C-4529-ADE3-BF5DA52FACF6}</UniqueIdentifier>
+      <UniqueIdentifier>{338BDEF4-67C8-4768-B638-F72FEBF32F85}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\adaptor\boost\fusion.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\adaptor\boost</Filter>
@@ -1674,7 +1673,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\adaptor\boost</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\adaptor\cpp11">
-      <UniqueIdentifier>{FD9F82CD-68D8-4FB5-AB46-3CF0C50EDB25}</UniqueIdentifier>
+      <UniqueIdentifier>{EC759B01-5F5A-4DA1-B871-F86E896B2833}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\adaptor\cpp11\array.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\adaptor\cpp11</Filter>
@@ -1707,7 +1706,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\adaptor\cpp11</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\adaptor\cpp17">
-      <UniqueIdentifier>{D82373D8-870D-49A6-8C30-5D7F965CC51C}</UniqueIdentifier>
+      <UniqueIdentifier>{F0E29353-567F-4693-8661-DC4260E4E439}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\adaptor\cpp17\optional.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\adaptor\cpp17</Filter>
@@ -1716,7 +1715,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\adaptor\cpp17</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\adaptor\tr1">
-      <UniqueIdentifier>{612DE6C0-3071-492C-9BF7-F993F98DB436}</UniqueIdentifier>
+      <UniqueIdentifier>{66EEE9B5-C09F-4984-B569-002F2BF68226}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\adaptor\tr1\unordered_map.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\adaptor\tr1</Filter>
@@ -1725,7 +1724,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\adaptor\tr1</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef">
-      <UniqueIdentifier>{AA81ABF2-3D02-4F20-A271-F0D3D180DB30}</UniqueIdentifier>
+      <UniqueIdentifier>{8A7DD57B-E555-4286-A3DF-4CFD80030EAB}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\architecture.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef</Filter>
@@ -1761,7 +1760,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\architecture">
-      <UniqueIdentifier>{E2A82CAF-939D-49BE-8C25-9C5345E86D4F}</UniqueIdentifier>
+      <UniqueIdentifier>{362AF710-4D65-4A7B-83F3-3C39C49B6D36}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\architecture\alpha.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\architecture</Filter>
@@ -1815,7 +1814,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\architecture</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\architecture\x86">
-      <UniqueIdentifier>{BB59BD43-5026-4548-A7BE-B3AF445DB70B}</UniqueIdentifier>
+      <UniqueIdentifier>{10D71175-DBAF-497E-9B00-82E07A18E3D1}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\architecture\x86\32.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\architecture\x86</Filter>
@@ -1824,7 +1823,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\architecture\x86</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\compiler">
-      <UniqueIdentifier>{DF5FC3FF-EAD4-447B-B6EB-4330209928BB}</UniqueIdentifier>
+      <UniqueIdentifier>{FC6F32FF-E660-4BF3-9EAB-A44B1D017786}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\compiler\borland.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\compiler</Filter>
@@ -1914,7 +1913,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\compiler</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\detail">
-      <UniqueIdentifier>{3804BDDF-4575-496E-B9B7-13FF3A8031F3}</UniqueIdentifier>
+      <UniqueIdentifier>{8E86E9E5-AB4E-4CAA-8D92-EEE30F29BBC6}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\detail\comp_detected.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\detail</Filter>
@@ -1941,13 +1940,13 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\detail</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\hardware">
-      <UniqueIdentifier>{479A0749-F231-4256-9F18-9DF15E747EFB}</UniqueIdentifier>
+      <UniqueIdentifier>{2C8F8C02-78B7-4714-9A75-14C542ACC705}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\hardware\simd.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\hardware</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\hardware\simd">
-      <UniqueIdentifier>{D1CA7D58-28CE-42C4-8E8D-020D5FB1422B}</UniqueIdentifier>
+      <UniqueIdentifier>{548A5F10-F045-4DC8-899A-A681E3F31AF1}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\hardware\simd\arm.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\hardware\simd</Filter>
@@ -1962,31 +1961,31 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\hardware\simd</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\hardware\simd\arm">
-      <UniqueIdentifier>{C5AA1986-8C81-484E-8B1D-F2BBD3EE23C6}</UniqueIdentifier>
+      <UniqueIdentifier>{B7EEC96A-A0F9-4DF2-996B-BBC9CF7CADD6}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\hardware\simd\arm\versions.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\hardware\simd\arm</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\hardware\simd\ppc">
-      <UniqueIdentifier>{1B1687B1-6719-446A-8FEC-D00727DFC0A4}</UniqueIdentifier>
+      <UniqueIdentifier>{DA9EFAAE-352C-41DC-BAB8-EB8A32628C57}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\hardware\simd\ppc\versions.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\hardware\simd\ppc</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\hardware\simd\x86">
-      <UniqueIdentifier>{61B8E9B8-0F17-408B-B8D5-A81C50CE326A}</UniqueIdentifier>
+      <UniqueIdentifier>{DEFE239F-8669-445D-8F20-509C94D4F4B3}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\hardware\simd\x86\versions.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\hardware\simd\x86</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\hardware\simd\x86_amd">
-      <UniqueIdentifier>{2D620895-5B72-4416-B812-608D7EA27101}</UniqueIdentifier>
+      <UniqueIdentifier>{0588089E-E3B4-4D9F-BCD0-A45215B22E83}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\hardware\simd\x86_amd\versions.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\hardware\simd\x86_amd</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\language">
-      <UniqueIdentifier>{3298CBEF-41B5-4DA0-9486-F7C4885D48A8}</UniqueIdentifier>
+      <UniqueIdentifier>{E8216632-CF81-4F26-86FE-13C9499BB75B}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\language\objc.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\language</Filter>
@@ -1998,7 +1997,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\language</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\library">
-      <UniqueIdentifier>{A03D0646-8DA9-43B8-9C64-B8AE7DB88DB6}</UniqueIdentifier>
+      <UniqueIdentifier>{400E5C20-6300-4B04-96E4-A62B6619F9C3}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\library\c.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\library</Filter>
@@ -2007,7 +2006,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\library</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\library\c">
-      <UniqueIdentifier>{060B72DF-F2B8-40A0-A774-626395B80EAD}</UniqueIdentifier>
+      <UniqueIdentifier>{5A267DB8-16D2-45DD-84B1-0B17AE729995}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\library\c\gnu.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\library\c</Filter>
@@ -2025,7 +2024,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\library\c</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\library\std">
-      <UniqueIdentifier>{9BAA2F07-49F8-47DD-B9DB-B57330FDABF2}</UniqueIdentifier>
+      <UniqueIdentifier>{8CFDDF0F-9BF8-4FD3-92C9-47B537B1D7DA}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\library\std\cxx.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\library\std</Filter>
@@ -2061,7 +2060,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\library\std</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\os">
-      <UniqueIdentifier>{D02E387D-812F-4364-B5EE-302433DDA0D3}</UniqueIdentifier>
+      <UniqueIdentifier>{1EAAD029-8660-420C-8B55-0C167783BC60}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\os\aix.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\os</Filter>
@@ -2118,7 +2117,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\os</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\os\bsd">
-      <UniqueIdentifier>{7F7B0B7A-5F41-456D-A6EA-F7FE24B2A37F}</UniqueIdentifier>
+      <UniqueIdentifier>{9225C7DE-8A23-4442-A1B0-1C21F2BB71B2}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\os\bsd\bsdi.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\os\bsd</Filter>
@@ -2136,13 +2135,13 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\os\bsd</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\other">
-      <UniqueIdentifier>{9D07F2D2-174E-4764-9E44-9359DEB7516F}</UniqueIdentifier>
+      <UniqueIdentifier>{1B5F9FD2-0AF9-4E76-A9B5-C0F4D70987DE}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\other\endian.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\other</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\platform">
-      <UniqueIdentifier>{25C34F87-C8C9-4641-9CFA-ABA9A538EE78}</UniqueIdentifier>
+      <UniqueIdentifier>{C39872C1-593A-4973-ACAB-A4A127A1590B}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\platform\mingw.h">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\platform</Filter>
@@ -2160,7 +2159,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\predef\platform</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor">
-      <UniqueIdentifier>{B7692776-94BF-45C2-A889-D645BF42DBF7}</UniqueIdentifier>
+      <UniqueIdentifier>{52C8F428-5043-4105-AE85-304020E1B2D2}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\arithmetic.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor</Filter>
@@ -2307,7 +2306,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\arithmetic">
-      <UniqueIdentifier>{137B00DB-DDFE-4C1F-96E1-9171D3A2538A}</UniqueIdentifier>
+      <UniqueIdentifier>{43AAB005-A90F-4B4A-9076-1030F76A1522}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\arithmetic\add.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\arithmetic</Filter>
@@ -2331,13 +2330,13 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\arithmetic</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\arithmetic\detail">
-      <UniqueIdentifier>{23F77669-A4F4-49F0-BFFF-830E79E30299}</UniqueIdentifier>
+      <UniqueIdentifier>{C45F3984-B160-4C10-B0D6-EA62ED5BF419}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\arithmetic\detail\div_base.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\arithmetic\detail</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\array">
-      <UniqueIdentifier>{87281C18-836C-454D-86A2-5DA1987ED7CE}</UniqueIdentifier>
+      <UniqueIdentifier>{DDE2CC9F-4627-49BC-A075-C8624E4C07B8}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\array\data.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\array</Filter>
@@ -2385,13 +2384,13 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\array</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\array\detail">
-      <UniqueIdentifier>{D8823FCD-F9DD-467F-A141-4C8F8EB76457}</UniqueIdentifier>
+      <UniqueIdentifier>{F432FBC7-1C10-4217-8164-7742A70B1F65}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\array\detail\get_data.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\array\detail</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\comparison">
-      <UniqueIdentifier>{DA21DFC8-36A0-4EB6-B7EC-64AE3E1B28F5}</UniqueIdentifier>
+      <UniqueIdentifier>{A349DB13-3B14-4458-B1CA-CB2418FD117A}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\comparison\equal.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\comparison</Filter>
@@ -2412,7 +2411,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\comparison</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\config">
-      <UniqueIdentifier>{F098C752-B64B-40FC-A990-74F5D7E52B1B}</UniqueIdentifier>
+      <UniqueIdentifier>{5DDDF2E8-07A0-432F-9A4B-38F7DE747DC9}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\config\config.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\config</Filter>
@@ -2421,7 +2420,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\config</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\control">
-      <UniqueIdentifier>{65EDE40C-CE16-444C-942F-02616FEADC79}</UniqueIdentifier>
+      <UniqueIdentifier>{2A816A76-0E92-49D7-865D-813E2A0D78B3}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\control\deduce_d.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\control</Filter>
@@ -2442,31 +2441,31 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\control</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\control\detail">
-      <UniqueIdentifier>{9DD3CFFC-B8C3-4C50-A371-AEC8B7C2CB68}</UniqueIdentifier>
+      <UniqueIdentifier>{B0FAEE4B-2029-4F4A-8324-9262379DD8B8}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\control\detail\while.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\control\detail</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\control\detail\dmc">
-      <UniqueIdentifier>{CCF01D9D-C4DA-45FF-B200-7CB5949C5FAD}</UniqueIdentifier>
+      <UniqueIdentifier>{2D2C9298-0713-4365-B6F5-9C1DA09D29F5}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\control\detail\dmc\while.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\control\detail\dmc</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\control\detail\edg">
-      <UniqueIdentifier>{611311B0-2235-4311-AA24-DB2874126F42}</UniqueIdentifier>
+      <UniqueIdentifier>{3CA6C69A-33F2-4EA5-8755-F5096646F0A9}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\control\detail\edg\while.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\control\detail\edg</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\control\detail\msvc">
-      <UniqueIdentifier>{EDDD5DE3-4A09-4564-81D6-3B26184CA418}</UniqueIdentifier>
+      <UniqueIdentifier>{FF65A13D-C722-452F-AD5D-DD650E2A49E5}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\control\detail\msvc\while.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\control\detail\msvc</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\debug">
-      <UniqueIdentifier>{6AD0222D-083C-4715-B129-2557A4E7007F}</UniqueIdentifier>
+      <UniqueIdentifier>{136D8493-389B-410B-A82F-A902A988947C}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\debug\assert.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\debug</Filter>
@@ -2478,7 +2477,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\debug</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\detail">
-      <UniqueIdentifier>{245D62C9-F526-45B2-B577-3C5EE71A71B8}</UniqueIdentifier>
+      <UniqueIdentifier>{F360D22A-BCA0-4863-AEE6-88F010597C11}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\detail\auto_rec.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\detail</Filter>
@@ -2502,13 +2501,13 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\detail</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\detail\dmc">
-      <UniqueIdentifier>{C847D6B1-CFA6-46C3-84E6-DC1A48DECDBF}</UniqueIdentifier>
+      <UniqueIdentifier>{149AFA70-FBAF-4A69-93E6-093641806BA5}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\detail\dmc\auto_rec.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\detail\dmc</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\facilities">
-      <UniqueIdentifier>{3632A713-FBB7-4126-A806-7CF68852C200}</UniqueIdentifier>
+      <UniqueIdentifier>{D8FF0A84-606A-487A-933F-2B787A5D8347}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\facilities\apply.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\facilities</Filter>
@@ -2541,13 +2540,13 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\facilities</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\facilities\detail">
-      <UniqueIdentifier>{A1184D41-0B90-4B17-869D-DE8703E17FA4}</UniqueIdentifier>
+      <UniqueIdentifier>{32CA7EA0-3861-45F0-BBA7-46FC8FE4CDCA}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\facilities\detail\is_empty.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\facilities\detail</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\iteration">
-      <UniqueIdentifier>{4F0C0392-613B-47A6-8A4D-B8493A9AD44D}</UniqueIdentifier>
+      <UniqueIdentifier>{BE2FD0A5-330D-4FEA-824A-7BF215AA6826}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\iteration\iterate.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\iteration</Filter>
@@ -2559,7 +2558,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\iteration</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\iteration\detail">
-      <UniqueIdentifier>{75F46607-9691-492C-B1AE-95E23B1261BF}</UniqueIdentifier>
+      <UniqueIdentifier>{91796343-7D27-4DBD-838A-E354C69C5A2D}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\iteration\detail\finish.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\iteration\detail</Filter>
@@ -2577,7 +2576,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\iteration\detail</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\iteration\detail\bounds">
-      <UniqueIdentifier>{1945D8A7-3E69-44F9-BB89-70166A4E7EA0}</UniqueIdentifier>
+      <UniqueIdentifier>{0A55268E-2815-48D9-B55F-E66382C1C65A}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\iteration\detail\bounds\lower1.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\iteration\detail\bounds</Filter>
@@ -2610,7 +2609,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\iteration\detail\bounds</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\iteration\detail\iter">
-      <UniqueIdentifier>{DDDEB601-A6E6-4AF9-AB92-1C7B3C9B032C}</UniqueIdentifier>
+      <UniqueIdentifier>{2DE2F73D-EA19-4CDC-B471-2FD6F7F51345}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\iteration\detail\iter\forward1.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\iteration\detail\iter</Filter>
@@ -2643,7 +2642,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\iteration\detail\iter</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\list">
-      <UniqueIdentifier>{EC400876-1956-416C-9D77-0D0D8D1CBC55}</UniqueIdentifier>
+      <UniqueIdentifier>{714D1E0A-05F5-42C6-9ED2-284D3FE499B4}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\list\adt.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\list</Filter>
@@ -2703,7 +2702,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\list</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\list\detail">
-      <UniqueIdentifier>{5D55CDBA-E80A-4768-81BC-3E9AF1AE9C6F}</UniqueIdentifier>
+      <UniqueIdentifier>{1FD4FAB5-7161-4CCF-8289-038ABB4C9E3D}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\list\detail\fold_left.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\list\detail</Filter>
@@ -2712,13 +2711,13 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\list\detail</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\list\detail\dmc">
-      <UniqueIdentifier>{A2F0EA69-1B8C-423C-B2A0-0FB388747A71}</UniqueIdentifier>
+      <UniqueIdentifier>{54BE0890-1C53-4D1C-9B3C-D1A8EC2087E7}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\list\detail\dmc\fold_left.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\list\detail\dmc</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\list\detail\edg">
-      <UniqueIdentifier>{1473B5BE-DE56-43D4-9D14-D28E84773038}</UniqueIdentifier>
+      <UniqueIdentifier>{3AB452C0-7708-4D3E-92F8-7832E3312BB5}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\list\detail\edg\fold_left.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\list\detail\edg</Filter>
@@ -2727,7 +2726,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\list\detail\edg</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\logical">
-      <UniqueIdentifier>{DAD80CA9-54CD-4FB3-B4A7-9EAA355833CF}</UniqueIdentifier>
+      <UniqueIdentifier>{F18C2B47-5719-49DF-B595-A316626353C3}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\logical\and.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\logical</Filter>
@@ -2763,7 +2762,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\logical</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\punctuation">
-      <UniqueIdentifier>{1B149098-B029-45CA-9E4F-30A12C805B8F}</UniqueIdentifier>
+      <UniqueIdentifier>{AA2BEEAF-F1D8-4CE8-A22D-B7202DBFEB45}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\punctuation\comma.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\punctuation</Filter>
@@ -2784,13 +2783,13 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\punctuation</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\punctuation\detail">
-      <UniqueIdentifier>{6DC38C75-1AED-4161-8393-A8E856335314}</UniqueIdentifier>
+      <UniqueIdentifier>{37538D36-7A63-462E-AEA8-36A83FF99AAF}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\punctuation\detail\is_begin_parens.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\punctuation\detail</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\repetition">
-      <UniqueIdentifier>{2220DCDE-9AFA-401C-9CAF-54C17469B2ED}</UniqueIdentifier>
+      <UniqueIdentifier>{F91552C2-6ED6-47A1-BDE8-47910018874F}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\repetition\deduce_r.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\repetition</Filter>
@@ -2841,31 +2840,31 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\repetition</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\repetition\detail">
-      <UniqueIdentifier>{A27C010E-A6B2-4BF3-9337-B80A896B1B75}</UniqueIdentifier>
+      <UniqueIdentifier>{A87D546D-C9DC-4103-9E2A-DA976BCBB1D3}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\repetition\detail\for.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\repetition\detail</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\repetition\detail\dmc">
-      <UniqueIdentifier>{FD617756-EF8B-455F-9F14-C1AC16D24420}</UniqueIdentifier>
+      <UniqueIdentifier>{2BBBDC40-CF96-41E7-97AF-145505EA396A}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\repetition\detail\dmc\for.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\repetition\detail\dmc</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\repetition\detail\edg">
-      <UniqueIdentifier>{2670D6A0-6624-4F17-A798-D518D9E64F2F}</UniqueIdentifier>
+      <UniqueIdentifier>{265DCDE5-466E-406F-98C6-720D4D2F3761}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\repetition\detail\edg\for.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\repetition\detail\edg</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\repetition\detail\msvc">
-      <UniqueIdentifier>{7EE082C9-5D5D-48F7-BEF6-84CD02B63CF0}</UniqueIdentifier>
+      <UniqueIdentifier>{A710E365-AC28-4ABF-8F64-5DC121BF6B3B}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\repetition\detail\msvc\for.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\repetition\detail\msvc</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\selection">
-      <UniqueIdentifier>{2B02A866-CF68-437C-8421-71B5623A680B}</UniqueIdentifier>
+      <UniqueIdentifier>{FD2A87B9-7041-4114-AF7D-A3CB8DE63567}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\selection\max.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\selection</Filter>
@@ -2874,7 +2873,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\selection</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\seq">
-      <UniqueIdentifier>{ABC07E02-E291-463B-8B93-E857FD379483}</UniqueIdentifier>
+      <UniqueIdentifier>{063D4F01-238C-40BE-AA6D-E437D3161F17}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\seq\cat.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\seq</Filter>
@@ -2958,7 +2957,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\seq</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\seq\detail">
-      <UniqueIdentifier>{8B2D319F-1E9D-4F59-B590-06E5904C05EF}</UniqueIdentifier>
+      <UniqueIdentifier>{6AFEDA3A-DCA4-4FA5-9C2D-5464EA1B5A61}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\seq\detail\binary_transform.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\seq\detail</Filter>
@@ -2970,7 +2969,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\seq\detail</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\slot">
-      <UniqueIdentifier>{896DC8BB-5D31-4642-A2B6-5BC8F7F3055B}</UniqueIdentifier>
+      <UniqueIdentifier>{925368DD-DA21-46D1-A572-A256DB15CFAD}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\slot\counter.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\slot</Filter>
@@ -2979,7 +2978,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\slot</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\slot\detail">
-      <UniqueIdentifier>{586AFED4-29BA-4046-9C7D-7B04DC274CD8}</UniqueIdentifier>
+      <UniqueIdentifier>{891B7CD5-DF49-4AEA-A1D1-F72D986DC111}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\slot\detail\counter.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\slot\detail</Filter>
@@ -3006,7 +3005,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\slot\detail</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\tuple">
-      <UniqueIdentifier>{E24BC079-A65B-4E54-9ABE-F4AEBDD0BE4C}</UniqueIdentifier>
+      <UniqueIdentifier>{12B0AB0E-9187-4887-918B-F8B4C1F82196}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\tuple\eat.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\tuple</Filter>
@@ -3057,13 +3056,13 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\tuple</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\tuple\detail">
-      <UniqueIdentifier>{36CA322B-A60E-4DBA-B20F-78B9E5355FA2}</UniqueIdentifier>
+      <UniqueIdentifier>{83F533C7-DEB8-40C5-BD0C-5E53A7BCDA18}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\tuple\detail\is_single_return.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\tuple\detail</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\variadic">
-      <UniqueIdentifier>{E4128F62-ED34-4EDE-832D-F6A2A6831AD9}</UniqueIdentifier>
+      <UniqueIdentifier>{58104598-D395-41B2-8CC1-05E4533F773B}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\variadic\elem.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\variadic</Filter>
@@ -3084,13 +3083,13 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\variadic</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\variadic\detail">
-      <UniqueIdentifier>{92807772-FEEB-46C5-BF2B-561929D3CF78}</UniqueIdentifier>
+      <UniqueIdentifier>{2B237E87-A570-4447-9D96-F4F6699E8384}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\variadic\detail\is_single_return.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\preprocessor\variadic\detail</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\v1">
-      <UniqueIdentifier>{18F8AF08-6764-4E30-A3E4-77EE6C575967}</UniqueIdentifier>
+      <UniqueIdentifier>{64B12CDC-01A8-4931-92D5-674F86259C9F}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\v1\cpp_config.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\v1</Filter>
@@ -3180,7 +3179,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\v1</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\v1\adaptor">
-      <UniqueIdentifier>{CF0C44E6-CC50-46CA-98F7-B517E0121A3A}</UniqueIdentifier>
+      <UniqueIdentifier>{740C2579-4A76-42B9-B28F-818A4924205E}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\v1\adaptor\adaptor_base.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\v1\adaptor</Filter>
@@ -3300,7 +3299,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\v1\adaptor</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\v1\adaptor\boost">
-      <UniqueIdentifier>{4EC4D1F2-1903-4831-8FF8-045C5E273E59}</UniqueIdentifier>
+      <UniqueIdentifier>{19E8552C-277A-47E0-A852-C51156D7FBB1}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\v1\adaptor\boost\fusion.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\v1\adaptor\boost</Filter>
@@ -3321,7 +3320,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\v1\adaptor\boost</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\v1\adaptor\cpp11">
-      <UniqueIdentifier>{6028F161-7E19-4AE4-98FA-68FF02053D86}</UniqueIdentifier>
+      <UniqueIdentifier>{A975922F-1814-4631-9B71-63DBDB80A604}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\v1\adaptor\cpp11\array.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\v1\adaptor\cpp11</Filter>
@@ -3354,7 +3353,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\v1\adaptor\cpp11</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\v1\adaptor\cpp17">
-      <UniqueIdentifier>{F7E03265-1115-43E1-9C8A-DE6D29644EA5}</UniqueIdentifier>
+      <UniqueIdentifier>{E5BDA985-4DF9-4B0B-9C47-093BBB210D97}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\v1\adaptor\cpp17\optional.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\v1\adaptor\cpp17</Filter>
@@ -3363,7 +3362,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\v1\adaptor\cpp17</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\v1\adaptor\detail">
-      <UniqueIdentifier>{F78D63F3-2ADD-410B-A924-1DA40299035E}</UniqueIdentifier>
+      <UniqueIdentifier>{6AF7BC30-FED0-4E92-A3B8-F1D5B9169F6D}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\v1\adaptor\detail\cpp03_define_array.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\v1\adaptor\detail</Filter>
@@ -3402,7 +3401,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\v1\adaptor\detail</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\v1\adaptor\tr1">
-      <UniqueIdentifier>{0137A8DE-5951-4734-8247-E60DE8640216}</UniqueIdentifier>
+      <UniqueIdentifier>{8AE1AB83-3CE9-4644-8DF5-69F786C01D7D}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\v1\adaptor\tr1\unordered_map.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\v1\adaptor\tr1</Filter>
@@ -3411,7 +3410,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\v1\adaptor\tr1</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\v1\detail">
-      <UniqueIdentifier>{387C6BF2-1B03-4198-93E5-2CBB8FDCCC3F}</UniqueIdentifier>
+      <UniqueIdentifier>{AACEB3BB-D8D9-4735-A5F6-589E80CCC703}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\v1\detail\cpp03_zone.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\v1\detail</Filter>
@@ -3426,7 +3425,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\v1\detail</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\v2">
-      <UniqueIdentifier>{A23E8997-8C25-4C11-AF0E-2CA4B9C9C468}</UniqueIdentifier>
+      <UniqueIdentifier>{C28B8BF7-8E94-4AB4-823E-37B488695D36}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\v2\cpp_config_decl.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\v2</Filter>
@@ -3492,7 +3491,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\v2</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\v2\adaptor">
-      <UniqueIdentifier>{21A883EE-E6EC-4E40-B4FB-FE2CA0B1896E}</UniqueIdentifier>
+      <UniqueIdentifier>{4F624564-386E-453C-8909-D875B01F7A23}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\v2\adaptor\adaptor_base.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\v2\adaptor</Filter>
@@ -3537,13 +3536,13 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\v2\adaptor</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\v2\adaptor\boost">
-      <UniqueIdentifier>{FC1D2A26-419A-4479-93E2-D1060D492135}</UniqueIdentifier>
+      <UniqueIdentifier>{AB7908C6-93A2-4F9E-914E-F3D015DF06CE}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\v2\adaptor\boost\msgpack_variant_decl.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\v2\adaptor\boost</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\v2\adaptor\detail">
-      <UniqueIdentifier>{1CBD4FD4-7B4A-4259-BF76-0535C3AE1E55}</UniqueIdentifier>
+      <UniqueIdentifier>{46AE9546-775C-43FC-9CBF-9430B30FF1D5}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\v2\adaptor\detail\cpp03_define_array_decl.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\v2\adaptor\detail</Filter>
@@ -3564,7 +3563,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\v2\adaptor\detail</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\v2\detail">
-      <UniqueIdentifier>{A3294E97-A792-4347-B0CC-B61AF9E7071B}</UniqueIdentifier>
+      <UniqueIdentifier>{82B57769-2799-4A5F-9E72-4F5780E6DAB2}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\v2\detail\cpp03_zone_decl.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\v2\detail</Filter>
@@ -3573,19 +3572,19 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\msgpack\v2\detail</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\nonstd">
-      <UniqueIdentifier>{96A92763-97EE-4E9B-B5A1-CD3FB27657CC}</UniqueIdentifier>
+      <UniqueIdentifier>{36A71474-51A2-48EC-A950-2DB4B53E50CC}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\nonstd\optional.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\include\rpc\nonstd</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\lib">
-      <UniqueIdentifier>{581ED615-0744-4B83-A9E3-A5900268414C}</UniqueIdentifier>
+      <UniqueIdentifier>{3ADC64A3-ABB8-49B9-8E88-F4F9D2348CE3}</UniqueIdentifier>
     </Filter>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\lib\x64">
-      <UniqueIdentifier>{384957CA-230D-475F-A94F-9276D60075F4}</UniqueIdentifier>
+      <UniqueIdentifier>{CCD73CDB-57B4-48A9-9A3B-E12AA49FBC60}</UniqueIdentifier>
     </Filter>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\lib\x64\Debug">
-      <UniqueIdentifier>{569DB9B9-2BDE-4E72-89CB-AEFCF35CFA12}</UniqueIdentifier>
+      <UniqueIdentifier>{3F896809-7506-4228-9F7B-3AE2AA48D970}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\lib\x64\Debug\rpc.lib">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\lib\x64\Debug</Filter>
@@ -3594,16 +3593,16 @@
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\lib\x64\Debug</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\deps\rpclib\lib\x64\Release">
-      <UniqueIdentifier>{291F67EA-9F30-4AC8-A18D-FF0C965B790A}</UniqueIdentifier>
+      <UniqueIdentifier>{A448C53C-8E6B-4BC2-A78B-841E564BA0B6}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\deps\rpclib\lib\x64\Release\rpc.lib">
       <Filter>Plugins\AirSim\Source\AirLib\deps\rpclib\lib\x64\Release</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\include">
-      <UniqueIdentifier>{0BE12831-48E4-40B4-BA3B-2713BADCC934}</UniqueIdentifier>
+      <UniqueIdentifier>{1D98CD79-5457-4AAC-86E5-CB6091F34D71}</UniqueIdentifier>
     </Filter>
     <Filter Include="Plugins\AirSim\Source\AirLib\include\api">
-      <UniqueIdentifier>{BDF20879-C5BA-4E1C-8BE7-D31146F44B50}</UniqueIdentifier>
+      <UniqueIdentifier>{33D99839-7944-4E81-BBC7-353AA6A0A6BD}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\include\api\ApiProvider.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\include\api</Filter>
@@ -3630,7 +3629,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\include\api</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\include\common">
-      <UniqueIdentifier>{E0804894-BA13-45C6-AC23-7F5B32C79FB3}</UniqueIdentifier>
+      <UniqueIdentifier>{6227094D-99B1-4902-8BEF-176C6ED19642}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\include\common\AirSimSettings.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\include\common</Filter>
@@ -3711,7 +3710,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\include\common</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\include\common\common_utils">
-      <UniqueIdentifier>{40F2997D-EF65-4A66-8D1C-1D390509E331}</UniqueIdentifier>
+      <UniqueIdentifier>{1357DE7F-4DA1-4832-8D95-2ACDB1505EBA}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\include\common\common_utils\AsyncTasker.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\include\common\common_utils</Filter>
@@ -3792,7 +3791,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\include\common\common_utils</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\include\physics">
-      <UniqueIdentifier>{35469716-AACB-4642-8A9E-040F1128DF78}</UniqueIdentifier>
+      <UniqueIdentifier>{AABC4944-7447-4693-8FAD-0E0AD87ECE25}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\include\physics\DebugPhysicsBody.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\include\physics</Filter>
@@ -3822,7 +3821,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\include\physics</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\include\safety">
-      <UniqueIdentifier>{4FE53CA5-A4A9-4279-88D0-0828266483E6}</UniqueIdentifier>
+      <UniqueIdentifier>{5217304C-EFE5-4073-A53E-3711F42DF991}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\include\safety\CubeGeoFence.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\include\safety</Filter>
@@ -3840,7 +3839,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\include\safety</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\include\sensors">
-      <UniqueIdentifier>{DF478868-045A-46CB-9083-110512FC3EAC}</UniqueIdentifier>
+      <UniqueIdentifier>{E1389332-3EE7-440C-8596-E0E071CE6229}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\include\sensors\SensorBase.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\include\sensors</Filter>
@@ -3852,7 +3851,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\include\sensors</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\include\sensors\barometer">
-      <UniqueIdentifier>{6574463F-B3F5-4E58-B513-2AB9C81486A1}</UniqueIdentifier>
+      <UniqueIdentifier>{A13B9804-B23A-41A9-825A-07D4B14087D5}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\include\sensors\barometer\BarometerBase.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\include\sensors\barometer</Filter>
@@ -3864,7 +3863,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\include\sensors\barometer</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\include\sensors\distance">
-      <UniqueIdentifier>{6927723B-AFFA-469D-B434-C27BD933D670}</UniqueIdentifier>
+      <UniqueIdentifier>{A115BE4D-D020-4054-98D3-9CB360E8B155}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\include\sensors\distance\DistanceBase.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\include\sensors\distance</Filter>
@@ -3876,7 +3875,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\include\sensors\distance</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\include\sensors\gps">
-      <UniqueIdentifier>{F51C5DAA-FE46-487D-99BC-349A181A79DC}</UniqueIdentifier>
+      <UniqueIdentifier>{C8590C80-8A88-49D1-AF4A-45ED2B0CA7A7}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\include\sensors\gps\GpsBase.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\include\sensors\gps</Filter>
@@ -3888,7 +3887,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\include\sensors\gps</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\include\sensors\imu">
-      <UniqueIdentifier>{72F054B8-8A8B-4E9B-AFD2-EC801AE273FE}</UniqueIdentifier>
+      <UniqueIdentifier>{67CAB77E-E475-467D-B4C2-76BE1E07B1C2}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\include\sensors\imu\ImuBase.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\include\sensors\imu</Filter>
@@ -3900,7 +3899,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\include\sensors\imu</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\include\sensors\lidar">
-      <UniqueIdentifier>{1A3A396F-B647-4067-BF4F-68562B71A3F2}</UniqueIdentifier>
+      <UniqueIdentifier>{F2B3C122-685B-48C0-8F21-F97977C3093E}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\include\sensors\lidar\LidarBase.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\include\sensors\lidar</Filter>
@@ -3912,7 +3911,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\include\sensors\lidar</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\include\sensors\magnetometer">
-      <UniqueIdentifier>{D3C2258D-9152-41B4-88F2-C1DDAC7D22ED}</UniqueIdentifier>
+      <UniqueIdentifier>{78C977AF-7578-4447-912F-6E642A8E7A67}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\include\sensors\magnetometer\MagnetometerBase.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\include\sensors\magnetometer</Filter>
@@ -3924,16 +3923,16 @@
       <Filter>Plugins\AirSim\Source\AirLib\include\sensors\magnetometer</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\include\vehicles">
-      <UniqueIdentifier>{A9DC56E5-4B9F-470B-B9CC-938D00049FF4}</UniqueIdentifier>
+      <UniqueIdentifier>{0C6F1C51-C9CF-4351-93ED-F533063088C1}</UniqueIdentifier>
     </Filter>
     <Filter Include="Plugins\AirSim\Source\AirLib\include\vehicles\car">
-      <UniqueIdentifier>{CCC68179-8E29-4DBC-B058-4B0FC63E41A1}</UniqueIdentifier>
+      <UniqueIdentifier>{ED285232-EEB6-4479-BA4B-AF6F94AB8E02}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\include\vehicles\car\CarApiFactory.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\include\vehicles\car</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\include\vehicles\car\api">
-      <UniqueIdentifier>{334BC1E1-5FC7-4493-AD1C-EEB97657C640}</UniqueIdentifier>
+      <UniqueIdentifier>{E254E56C-BBA0-49A7-838D-10B69B6D4581}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\include\vehicles\car\api\CarApiBase.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\include\vehicles\car\api</Filter>
@@ -3948,22 +3947,22 @@
       <Filter>Plugins\AirSim\Source\AirLib\include\vehicles\car\api</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\include\vehicles\car\firmwares">
-      <UniqueIdentifier>{4759C30E-0A4E-4A94-9EED-1A9DA5549444}</UniqueIdentifier>
+      <UniqueIdentifier>{DA5386F4-22C2-42FB-8804-C02A85423FA5}</UniqueIdentifier>
     </Filter>
     <Filter Include="Plugins\AirSim\Source\AirLib\include\vehicles\car\firmwares\ardurover">
-      <UniqueIdentifier>{AC4CE1B3-A5AB-4A9F-9EFD-BF2F04F20ED2}</UniqueIdentifier>
+      <UniqueIdentifier>{E2F23C51-7447-4756-BE29-007FA0F8C694}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\include\vehicles\car\firmwares\ardurover\ArduRoverApi.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\include\vehicles\car\firmwares\ardurover</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\include\vehicles\car\firmwares\physxcar">
-      <UniqueIdentifier>{49C10B45-ACF2-4CD6-9600-51591B1190E1}</UniqueIdentifier>
+      <UniqueIdentifier>{CAFC54C5-0ED6-400F-AFC2-D3BAB51D9AA7}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\include\vehicles\car\firmwares\physxcar\PhysXCarApi.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\include\vehicles\car\firmwares\physxcar</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\include\vehicles\multirotor">
-      <UniqueIdentifier>{23099846-A278-4BE3-8052-3A2F2C772BC6}</UniqueIdentifier>
+      <UniqueIdentifier>{A8971819-EE3A-44D8-8430-318BA7064EE2}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\include\vehicles\multirotor\MultiRotorParams.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\include\vehicles\multirotor</Filter>
@@ -3981,7 +3980,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\include\vehicles\multirotor</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\include\vehicles\multirotor\api">
-      <UniqueIdentifier>{12E5BA6F-659F-473D-89ED-12E03AE6EC86}</UniqueIdentifier>
+      <UniqueIdentifier>{67BA8BBF-BAD9-49BC-A318-1C2A6A3A4C61}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\include\vehicles\multirotor\api\MultirotorApiBase.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\include\vehicles\multirotor\api</Filter>
@@ -3999,10 +3998,10 @@
       <Filter>Plugins\AirSim\Source\AirLib\include\vehicles\multirotor\api</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\include\vehicles\multirotor\firmwares">
-      <UniqueIdentifier>{04880489-C94F-4D96-9AD0-D1B83409C3A5}</UniqueIdentifier>
+      <UniqueIdentifier>{DF77F9A4-DF1C-42A8-A03D-B414B1D3B8A9}</UniqueIdentifier>
     </Filter>
     <Filter Include="Plugins\AirSim\Source\AirLib\include\vehicles\multirotor\firmwares\arducopter">
-      <UniqueIdentifier>{7B60FF09-E105-4384-A7A5-C4CD1B182C1F}</UniqueIdentifier>
+      <UniqueIdentifier>{D8E60C8B-ACEE-4793-A85F-628DAC0D44EB}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\include\vehicles\multirotor\firmwares\arducopter\ArduCopterApi.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\include\vehicles\multirotor\firmwares\arducopter</Filter>
@@ -4011,7 +4010,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\include\vehicles\multirotor\firmwares\arducopter</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\include\vehicles\multirotor\firmwares\mavlink">
-      <UniqueIdentifier>{3F900F83-B30C-4357-A575-2AA2083C2B56}</UniqueIdentifier>
+      <UniqueIdentifier>{EDA45FA6-B50C-483A-99FD-718AA0995A6B}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\include\vehicles\multirotor\firmwares\mavlink\ArduCopterSoloApi.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\include\vehicles\multirotor\firmwares\mavlink</Filter>
@@ -4026,7 +4025,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\include\vehicles\multirotor\firmwares\mavlink</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\include\vehicles\multirotor\firmwares\simple_flight">
-      <UniqueIdentifier>{2E5AACAB-5FD2-46A8-9CE2-2446678BC55C}</UniqueIdentifier>
+      <UniqueIdentifier>{56CF0B61-0E41-462B-B8DA-9700B5D95E00}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\include\vehicles\multirotor\firmwares\simple_flight\AirSimSimpleFlightBoard.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\include\vehicles\multirotor\firmwares\simple_flight</Filter>
@@ -4047,7 +4046,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\include\vehicles\multirotor\firmwares\simple_flight</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\include\vehicles\multirotor\firmwares\simple_flight\firmware">
-      <UniqueIdentifier>{2AC8CA29-AB85-41FA-B354-990334362210}</UniqueIdentifier>
+      <UniqueIdentifier>{61415DED-DFF4-48C4-B315-E9201BDBF7FE}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\include\vehicles\multirotor\firmwares\simple_flight\firmware\AdaptiveController.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\include\vehicles\multirotor\firmwares\simple_flight\firmware</Filter>
@@ -4098,7 +4097,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\include\vehicles\multirotor\firmwares\simple_flight\firmware</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\include\vehicles\multirotor\firmwares\simple_flight\firmware\interfaces">
-      <UniqueIdentifier>{FA510310-C486-4E53-AB5D-448B867F1C86}</UniqueIdentifier>
+      <UniqueIdentifier>{CBEF57BC-B42A-4B8D-8945-E22C5FE47322}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\include\vehicles\multirotor\firmwares\simple_flight\firmware\interfaces\CommonStructs.hpp">
       <Filter>Plugins\AirSim\Source\AirLib\include\vehicles\multirotor\firmwares\simple_flight\firmware\interfaces</Filter>
@@ -4146,13 +4145,13 @@
       <Filter>Plugins\AirSim\Source\AirLib\include\vehicles\multirotor\firmwares\simple_flight\firmware\interfaces</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\lib">
-      <UniqueIdentifier>{A7BD5E24-1741-4ADC-87F2-AC2763060424}</UniqueIdentifier>
+      <UniqueIdentifier>{9DA4E813-52AD-435D-9410-346A0ECE5B0F}</UniqueIdentifier>
     </Filter>
     <Filter Include="Plugins\AirSim\Source\AirLib\lib\x64">
-      <UniqueIdentifier>{6D90C18D-8ECD-46D3-8C20-785DC208E8ED}</UniqueIdentifier>
+      <UniqueIdentifier>{6E884377-3D61-4631-AFC4-B8FCEE0BDED2}</UniqueIdentifier>
     </Filter>
     <Filter Include="Plugins\AirSim\Source\AirLib\lib\x64\Debug">
-      <UniqueIdentifier>{CB9B54BF-D3FE-4FCC-8D8B-8A2CD99D2517}</UniqueIdentifier>
+      <UniqueIdentifier>{5BEF7A56-397D-4141-AE23-BAE1C80A09BC}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\lib\x64\Debug\AirLib.lib">
       <Filter>Plugins\AirSim\Source\AirLib\lib\x64\Debug</Filter>
@@ -4161,16 +4160,16 @@
       <Filter>Plugins\AirSim\Source\AirLib\lib\x64\Debug</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\lib\x64\Release">
-      <UniqueIdentifier>{FF609DD0-D6D5-4E48-B8EC-7F2AF05B7685}</UniqueIdentifier>
+      <UniqueIdentifier>{7BCF225B-50F7-49F9-A935-5C2B86C40FC8}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\AirSim\Source\AirLib\lib\x64\Release\AirLib.lib">
       <Filter>Plugins\AirSim\Source\AirLib\lib\x64\Release</Filter>
     </None>
     <Filter Include="Plugins\AirSim\Source\AirLib\src">
-      <UniqueIdentifier>{C0E8B56B-69B4-44B5-9DE8-18C5940564B3}</UniqueIdentifier>
+      <UniqueIdentifier>{41E8A78D-98E0-4A57-BF6A-8F74C76D795C}</UniqueIdentifier>
     </Filter>
     <Filter Include="Plugins\AirSim\Source\AirLib\src\api">
-      <UniqueIdentifier>{FBE466DF-C6A2-487D-A3E2-3A5AE2A8116E}</UniqueIdentifier>
+      <UniqueIdentifier>{EE888985-4871-484B-AF13-154287FA954B}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Plugins\AirSim\Source\AirLib\src\api\RpcLibClientBase.cpp">
       <Filter>Plugins\AirSim\Source\AirLib\src\api</Filter>
@@ -4179,16 +4178,16 @@
       <Filter>Plugins\AirSim\Source\AirLib\src\api</Filter>
     </ClCompile>
     <Filter Include="Plugins\AirSim\Source\AirLib\src\common">
-      <UniqueIdentifier>{5BF335FE-F3E9-4E47-95E3-4A09CC23ECE7}</UniqueIdentifier>
+      <UniqueIdentifier>{6AFD63E6-3F7B-4E97-A3FB-2C1195E49BF8}</UniqueIdentifier>
     </Filter>
     <Filter Include="Plugins\AirSim\Source\AirLib\src\common\common_utils">
-      <UniqueIdentifier>{1CA1F64C-71C1-44D1-AF3E-1E3CC4A6386F}</UniqueIdentifier>
+      <UniqueIdentifier>{137D083D-E7A4-47ED-AB19-0CDF42F60D57}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Plugins\AirSim\Source\AirLib\src\common\common_utils\FileSystem.cpp">
       <Filter>Plugins\AirSim\Source\AirLib\src\common\common_utils</Filter>
     </ClCompile>
     <Filter Include="Plugins\AirSim\Source\AirLib\src\safety">
-      <UniqueIdentifier>{BB426C35-AA33-4B4E-9482-672CE684BB4F}</UniqueIdentifier>
+      <UniqueIdentifier>{73A0A7D9-00E7-4325-BEF8-F60D72E314E1}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Plugins\AirSim\Source\AirLib\src\safety\ObstacleMap.cpp">
       <Filter>Plugins\AirSim\Source\AirLib\src\safety</Filter>
@@ -4197,13 +4196,13 @@
       <Filter>Plugins\AirSim\Source\AirLib\src\safety</Filter>
     </ClCompile>
     <Filter Include="Plugins\AirSim\Source\AirLib\src\vehicles">
-      <UniqueIdentifier>{3B4845CB-251B-437D-A412-2DF467BBFC27}</UniqueIdentifier>
+      <UniqueIdentifier>{B12F48E2-4609-457B-9D2F-C4B0DB46A838}</UniqueIdentifier>
     </Filter>
     <Filter Include="Plugins\AirSim\Source\AirLib\src\vehicles\car">
-      <UniqueIdentifier>{D7C94DDE-06FD-4565-ACFA-E65B1517A65C}</UniqueIdentifier>
+      <UniqueIdentifier>{1C8D94B5-CC16-4C0E-9EB5-9D70BFB7F48A}</UniqueIdentifier>
     </Filter>
     <Filter Include="Plugins\AirSim\Source\AirLib\src\vehicles\car\api">
-      <UniqueIdentifier>{ACCA2A47-716B-41DF-B491-2383737D38D3}</UniqueIdentifier>
+      <UniqueIdentifier>{964DCDF4-1318-42CC-A419-0FEAFE244B82}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Plugins\AirSim\Source\AirLib\src\vehicles\car\api\CarRpcLibClient.cpp">
       <Filter>Plugins\AirSim\Source\AirLib\src\vehicles\car\api</Filter>
@@ -4212,10 +4211,10 @@
       <Filter>Plugins\AirSim\Source\AirLib\src\vehicles\car\api</Filter>
     </ClCompile>
     <Filter Include="Plugins\AirSim\Source\AirLib\src\vehicles\multirotor">
-      <UniqueIdentifier>{D81B8BDC-20FC-4610-A35E-AEF53E035037}</UniqueIdentifier>
+      <UniqueIdentifier>{F84B4C03-E24F-4353-8BF1-A1AC2B112D45}</UniqueIdentifier>
     </Filter>
     <Filter Include="Plugins\AirSim\Source\AirLib\src\vehicles\multirotor\api">
-      <UniqueIdentifier>{81158935-4C79-40C4-985B-A6EC196E1F73}</UniqueIdentifier>
+      <UniqueIdentifier>{67E2DBA8-841F-4D83-A211-C89A21A35D44}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Plugins\AirSim\Source\AirLib\src\vehicles\multirotor\api\MultirotorApiBase.cpp">
       <Filter>Plugins\AirSim\Source\AirLib\src\vehicles\multirotor\api</Filter>
@@ -4227,7 +4226,7 @@
       <Filter>Plugins\AirSim\Source\AirLib\src\vehicles\multirotor\api</Filter>
     </ClCompile>
     <Filter Include="Plugins\AirSim\Source\Recording">
-      <UniqueIdentifier>{A49D0D12-1D2D-4718-9DA1-211D610897BF}</UniqueIdentifier>
+      <UniqueIdentifier>{7F5102A3-0687-4981-9A95-546A216A05A3}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Plugins\AirSim\Source\Recording\RecordingFile.cpp">
       <Filter>Plugins\AirSim\Source\Recording</Filter>
@@ -4242,7 +4241,7 @@
       <Filter>Plugins\AirSim\Source\Recording</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\SimHUD">
-      <UniqueIdentifier>{E7F62EE8-833D-4A5F-A043-8292030B3D59}</UniqueIdentifier>
+      <UniqueIdentifier>{01CCB9DD-5CFF-48F3-8075-619EE2A0FBBA}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Plugins\AirSim\Source\SimHUD\SimHUD.cpp">
       <Filter>Plugins\AirSim\Source\SimHUD</Filter>
@@ -4257,7 +4256,7 @@
       <Filter>Plugins\AirSim\Source\SimHUD</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\SimJoyStick">
-      <UniqueIdentifier>{2AED04D0-ECB4-4199-A1D6-06FF2EBCA008}</UniqueIdentifier>
+      <UniqueIdentifier>{1AF182A7-D6F7-4DFD-9FB0-E2895111F635}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Plugins\AirSim\Source\SimJoyStick\DirectInputJoyStick.cpp">
       <Filter>Plugins\AirSim\Source\SimJoyStick</Filter>
@@ -4272,7 +4271,7 @@
       <Filter>Plugins\AirSim\Source\SimJoyStick</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\SimMode">
-      <UniqueIdentifier>{B6C532C8-15E4-436D-9A7E-8491F44AD1C2}</UniqueIdentifier>
+      <UniqueIdentifier>{922B1233-F551-48ED-87D2-F0666D842784}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\AirSim\Source\SimMode\LoadingScreenWidget.h">
       <Filter>Plugins\AirSim\Source\SimMode</Filter>
@@ -4290,7 +4289,7 @@
       <Filter>Plugins\AirSim\Source\SimMode</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\UnrealSensors">
-      <UniqueIdentifier>{6E7EAAE8-82F2-4CD1-A462-26A64FF29B83}</UniqueIdentifier>
+      <UniqueIdentifier>{4DCF6A08-C27B-4650-ABBA-CE0E1FBD2327}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Plugins\AirSim\Source\UnrealSensors\UnrealDistanceSensor.cpp">
       <Filter>Plugins\AirSim\Source\UnrealSensors</Filter>
@@ -4311,10 +4310,10 @@
       <Filter>Plugins\AirSim\Source\UnrealSensors</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\Vehicles">
-      <UniqueIdentifier>{E1C059EB-0DBE-48E4-84A1-DE04B8469129}</UniqueIdentifier>
+      <UniqueIdentifier>{572506C4-5783-488D-92C9-ED0F7D2A8710}</UniqueIdentifier>
     </Filter>
     <Filter Include="Plugins\AirSim\Source\Vehicles\Car">
-      <UniqueIdentifier>{ECBFE5FC-E19D-4AA0-8CE0-8ED0E8DF38A9}</UniqueIdentifier>
+      <UniqueIdentifier>{7C5F87A4-3DD5-4CEF-BF92-CB799A94DCA3}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Plugins\AirSim\Source\Vehicles\Car\CarPawn.cpp">
       <Filter>Plugins\AirSim\Source\Vehicles\Car</Filter>
@@ -4353,7 +4352,7 @@
       <Filter>Plugins\AirSim\Source\Vehicles\Car</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\Vehicles\ComputerVision">
-      <UniqueIdentifier>{AF3AEA50-556D-4D89-BBEE-7994926A1967}</UniqueIdentifier>
+      <UniqueIdentifier>{5A61AD37-ACE3-4249-86C9-3503D54A7E30}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Plugins\AirSim\Source\Vehicles\ComputerVision\ComputerVisionPawn.cpp">
       <Filter>Plugins\AirSim\Source\Vehicles\ComputerVision</Filter>
@@ -4368,7 +4367,7 @@
       <Filter>Plugins\AirSim\Source\Vehicles\ComputerVision</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\Vehicles\Multirotor">
-      <UniqueIdentifier>{5C77D9A4-F31B-406D-8AA1-C384A3A41687}</UniqueIdentifier>
+      <UniqueIdentifier>{6D11C087-EF63-4198-8621-3C14E08FA393}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Plugins\AirSim\Source\Vehicles\Multirotor\FlyingPawn.cpp">
       <Filter>Plugins\AirSim\Source\Vehicles\Multirotor</Filter>
@@ -4395,7 +4394,7 @@
       <Filter>Plugins\AirSim\Source\Vehicles\Multirotor</Filter>
     </ClInclude>
     <Filter Include="Plugins\AirSim\Source\Weather">
-      <UniqueIdentifier>{02C45089-AA5A-4EDF-9B79-726F7CD414D8}</UniqueIdentifier>
+      <UniqueIdentifier>{07593B0D-530C-4B98-9434-4F3CC83D955D}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Plugins\AirSim\Source\Weather\WeatherLib.cpp">
       <Filter>Plugins\AirSim\Source\Weather</Filter>
@@ -4407,7 +4406,7 @@
       <Filter>Plugins\AirSim</Filter>
     </None>
     <Filter Include="Source\Blocks">
-      <UniqueIdentifier>{6CD3C84A-372B-470B-B74E-4D38BDA749C2}</UniqueIdentifier>
+      <UniqueIdentifier>{4F55034A-E784-446E-9C42-610AD023703D}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Blocks\Blocks.Build.cs">
       <Filter>Source\Blocks</Filter>

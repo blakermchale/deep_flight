@@ -51,7 +51,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{8659951D-80D6-41E7-BCF2-B39A407E227C}</ProjectGuid>
+    <ProjectGuid>{A2ECAAF7-1833-4220-8D8E-5713F5E995A4}</ProjectGuid>
     <Keyword>MakeFileProj</Keyword>
     <RootNamespace>Blocks</RootNamespace>
     <PlatformToolset>v142</PlatformToolset>
@@ -269,7 +269,6 @@
     <None Include="..\..\Source\Blocks.Target.cs"/>
     <None Include="..\..\Source\BlocksEditor.Target.cs"/>
     <None Include="..\..\.gitignore"/>
-    <None Include="..\..\.ignoregit"/>
     <None Include="..\..\clean.bat"/>
     <None Include="..\..\clean.sh"/>
     <None Include="..\..\GenerateProjectFiles.bat"/>

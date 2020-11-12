@@ -16,10 +16,10 @@ pip3 install msgpack-rpc-python airsim gym
 
 Add user AirSimPath environment variable. Look up environment variables on windows [(Link)](https://www.architectryan.com/2018/08/31/how-to-change-environment-variables-on-windows-10/)
 
-Run update_from_git.bat to setup AirSim plugin in environment. Can be done in powershell or cmd line.
+Run update_from_git.bat to setup AirSim plugin in environment. Should be done in powershell.
 
 ``` cmd
-./update_from_git.bat
+.\update_from_git.bat $Env:AirSimPath
 ```
 
 ## Running
