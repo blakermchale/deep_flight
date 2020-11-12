@@ -15,7 +15,7 @@ Plugins/
 /Makefile
 
 # avoid checking uproject because this is usually just version change
-#*.uproject
+*.uproject
 
 # Visual Studio 2015 user specific files
 .vs/

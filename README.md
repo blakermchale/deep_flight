@@ -27,3 +27,10 @@ Run update_from_git.bat to setup AirSim plugin in environment. Should be done in
 Copy `settings.json` to Documents\AirSim.
 
 Open [Environments/Blocks/Blocks.sln] in visual studio. Press `F5`.
+
+## Errors
+
+**ERROR:** 'C:\Program Files\Epic Games\4.24\Engine\Intermediate\Build\Unused\UE4.exe does not exist'
+    when running debug editor in VS
+
+**[SOLUTION](https://answers.unrealengine.com/questions/218266/unable-to-start-program-ue4exe-error.html)**
