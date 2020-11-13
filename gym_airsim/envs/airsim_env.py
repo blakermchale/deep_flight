@@ -8,11 +8,9 @@ import gym
 from gym import spaces
 from gym.utils import seeding
 
-from gym_airsim.envs.myAirSimClient import myAirSimClient
+from gym_airsim.envs.MyAirSimClient import MyAirSimClient
 
 logger = logging.getLogger(__name__)
-
-
 
 
 class Action(Enum):
@@ -27,12 +25,17 @@ class Action(Enum):
     YAW_LEFT = 8
 
 class AirSimEnv(gym.Env):
+
     GOAL_REWARD = 100.
     COLLISION_REWARD = -100.
     DIST_THRESH = 1.0
+
     def __init__(self):
-        self.client = myAirSimClient()
+        self.client = MyAirSimClient()
         self.goal = np.array([10., 10., 3.])
+
+        self.observation_space = spaces.Box(low=0, high=255, shape=(84,84))
+        self.action_space = spaces.Discrete(9)
         
     def seed(self, seed=None):
         self.np_random, seed = seeding.np_random(seed)
@@ -51,18 +54,21 @@ class AirSimEnv(gym.Env):
             done (bool): whether the episode has ended, in which case further step() calls will return undefined results
             info (dict): contains auxiliary diagnostic information (helpful for debugging, and sometimes learning)
         """
+        info = None
         velOffsetCmd = self.interpret_action(action)
         self.client.modifyVel(velOffsetCmd)
-        
+    
         observation = self.client.getDepthImage()
+        reward, done = self.compute_reward()
+
         return observation, reward, done, info
         
     def reset(self):
         """
         Resets the state of the environment and returns an initial observation.
         """
-        
-        return self.state
+        self.client.sim_reset()
+        return self.client.getDepthImage()
 
     def compute_reward(self):
         """
@@ -73,7 +79,6 @@ class AirSimEnv(gym.Env):
             done (bool): True if the vehicle has collided or near the goal
         """
         has_collided = self.client.simGetCollisionInfo().has_collided
-        curr_vel = self.client.getMultirotorState().kinematics_estimated.linear_velocity
         curr_pos = self.client.getMultirotorState().kinematics_estimated.position
         curr_pos = np.array([curr_pos.x_val, curr_pos.y_val, curr_pos.z_val])
 
@@ -105,7 +110,7 @@ class AirSimEnv(gym.Env):
         """
         # Actions
         vel_offset = 0.25 # m/s
-        yaw_rate = 0.25 # ~14 deg/s
+        yaw_rate = 15 # deg/s
 
         if action == Action.NONE:
             offset = (0, 0, 0, 0)
@@ -124,6 +129,8 @@ class AirSimEnv(gym.Env):
         elif action == Action.YAW_RIGHT:
             offset = (0, 0, 0, yaw_rate)
         elif action == Action.YAW_LEFT:
-            offset = (0, 0, 0, -yaw_rate) 
+            offset = (0, 0, 0, -yaw_rate)
+        else:
+            raise ValueError(f"Action does not exist: {action}")
 
         return offset       

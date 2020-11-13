@@ -3,7 +3,7 @@ from airsim import MultirotorClient, YawMode, DrivetrainType
 from PIL import Image
 import numpy as np
 
-class myAirSimClient(MultirotorClient):
+class MyAirSimClient(MultirotorClient):
     """
     Client class for interfacing with airsim api.
     """
@@ -13,20 +13,21 @@ class myAirSimClient(MultirotorClient):
         self.enableApiControl(True)
         self.armDisarm(True)
 
-        self.home_pos = self.getMultirotorState().kinematics_estimated.position
-        self.home_orientation = self.getMultirotorState().kinematics_estimated.orientation
+        self.vehicle_name = "SimpleFlight"
+        self.camera_name = "front_center_custom"
+        
+        self.home_pos = self.getMultirotorState(vehicle_name=self.vehicle_name).kinematics_estimated.position
+        self.home_orientation = self.getMultirotorState(vehicle_name=self.vehicle_name).kinematics_estimated.orientation
         self.home = np.array([self.home_pos.x_val, self.home_pos.y_val, self.home_pos.z_val])
-
-        self.camera_name = "bottom_center_custom"
 
     def sim_reset(self):
         """
         Resets drone in simulation and takes off.
         """
         self.reset()
-        self.enableApiControl(True)
-        self.armDisarm(True)
-        self.moveToZAsync(3, 1).join()
+        self.enableApiControl(True, vehicle_name=self.vehicle_name)
+        self.armDisarm(True, vehicle_name=self.vehicle_name)
+        self.moveToZAsync(-2, 0.5, vehicle_name=self.vehicle_name).join()
 
     def modifyVel(self, offset):
         """
@@ -39,12 +40,12 @@ class myAirSimClient(MultirotorClient):
         vx, vy, vz, yaw_rate = offset
         yaw_mode = YawMode(is_rate=True, yaw_or_rate=yaw_rate)
 
-        curr_vel = self.getMultirotorState().kinematics_estimated.linear_velocity
+        curr_vel = self.getMultirotorState(vehicle_name=self.vehicle_name).kinematics_estimated.linear_velocity
         vx += curr_vel.x_val
         vy += curr_vel.y_val
         vz += curr_vel.z_val
         
-        self.moveByVelocityAsync(vx , vy, vz, 1.0, yaw_mode=yaw_mode).join()
+        self.moveByVelocityAsync(vx , vy, vz, 1.0, yaw_mode=yaw_mode, vehicle_name=self.vehicle_name).join()
 
     def getDepthImage(self):
         """
@@ -53,7 +54,7 @@ class myAirSimClient(MultirotorClient):
         responses = self.simGetImages([airsim.ImageRequest(self.camera_name, airsim.ImageType.DepthPerspective, True, False)])
         img1d = np.array(responses[0].image_data_float, dtype=np.float)
         img1d = 255/np.maximum(np.ones(img1d.size), img1d) # not sure what this is
-        img2d = np.reshape(img1d, (responses[0].height, responses[1].width))
+        img2d = np.reshape(img1d, (responses[0].height, responses[0].width))
 
         image = Image.fromarray(img2d)
         im_final = np.array(image.resize((84, 84)).convert('L'))
