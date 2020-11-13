@@ -34,3 +34,9 @@ Open [Environments/Blocks/Blocks.sln] in visual studio. Press `F5`.
     when running debug editor in VS
 
 **[SOLUTION](https://answers.unrealengine.com/questions/218266/unable-to-start-program-ue4exe-error.html)**
+
+## Resources
+
+[Official AirSim DQN](https://github.com/microsoft/AirSim/blob/d59ceb7f63878f5e087ea802d603ba0fd282ff56/PythonClient/multirotor/DQNdrone.py)
+
+[AirGym](https://github.com/Kjell-K/AirGym)

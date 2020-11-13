@@ -1,5 +1,6 @@
 # Deep Flight Ignores
 Environments/Blocks/Saved/*
+.vscode/
 
 
 # Visual Studio 2015 user specific files
