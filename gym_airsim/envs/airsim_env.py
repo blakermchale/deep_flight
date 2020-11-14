@@ -24,6 +24,7 @@ class Action(Enum):
     YAW_RIGHT = 7
     YAW_LEFT = 8
 
+
 class AirSimEnv(gym.Env):
 
     GOAL_REWARD = 100.

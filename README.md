@@ -15,11 +15,13 @@ git lfs install
 Setting up python:  
 ``` powershell
 pip3 install msgpack-rpc-python airsim gym tensorflow Pillow
+pip3 install -e .
 ```
 
 Add user AirSimPath environment variable. Look up environment variables on windows [(Link)](https://www.architectryan.com/2018/08/31/how-to-change-environment-variables-on-windows-10/)  
 Run update_from_git.bat to setup AirSim plugin in environment. Should be done in powershell.  
 ``` powershell
+cd Environments\Blocks
 .\update_from_git.bat $Env:AirSimPath
 ```
 
@@ -28,6 +30,10 @@ Run update_from_git.bat to setup AirSim plugin in environment. Should be done in
 Copy `settings.json` to Documents\AirSim.
 
 Open [Environments/Blocks/Blocks.sln](Environments/Blocks/Blocks.sln) in visual studio. Press `F5`.
+
+```powershell
+python dqn_agent.py
+```
 
 ## Errors
 
