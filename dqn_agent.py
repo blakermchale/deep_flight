@@ -1,42 +1,141 @@
 import gym
 import numpy as np
 import random
+from collections import deque
+
 from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense, Dropout
+from tensorflow.keras.layers import Dense, Dropout, Conv2D, Flatten
 from tensorflow.keras.optimizers import Adam
 
 from gym_airsim.envs.airsim_env import Action
 
 
 class DQNAgent:
-    def __init__(self, env):
+    # TODO: add in load model functionallity to save/load successful previous models and test
+    def __init__(self, env, max_mem=100000, epsilon=0.95, gamma=0.9, epsilon_decay=0.995, 
+                 learning_rate=0.005, tau=0.125, batch_size=32):
         self.env = env
-        pass
+        self.memory = deque(maxlen=max_mem)
+
+        self.epsilon = epsilon # explore prob
+        self.epsilon_min = 0.01 
+        self.epsilon_decay = epsilon_decay
+        self.gamma = gamma # discount factor
+        self.learning_rate = learning_rate
+        self.tau = tau
+        self.batch_size = batch_size
+
+        self.model = self.create_model()
+        self.target_model = self.create_model()
 
     def create_model(self):
-        pass
+        """
+        Creates TF model that takes in observation as input and predicts Q-values.
+        """
+        model = Sequential()
+        obs_shape = self.env.observation_space.shape
+        # input layer
+        model.add(Conv2D(16, (8, 8), strides=(4, 4), input_shape=obs_shape, activation="relu"))
+        # hidden layers
+        model.add(Conv2D(32, (4, 4), strides=(2, 2), activation="relu"))
+        model.add(Conv2D(32, (3, 3), strides=(1, 1), activation="relu"))
+        model.add(Flatten())
+        model.add(Dense(256, activation="relu"))
+        # output layer
+        model.add(Dense(self.env.action_space.n))
+        model.compile(loss="mean_squared_error", optimizer=Adam(lr=self.learning_rate))
+        return model
 
-    def act(self):
-        pass
+    def act(self, obs):
+        """
+        Chose to take an action which is either random or from the model.
+        Based on epsilon (explor probability)
+        
+        Args:
+            obs (object): current observation of environment
 
-    def remember(self):
-        pass
+        Returns:
+            action (Action): action to take
+        """
+        # perform epsilon decay
+        self.epsilon *= self.epsilon_decay
+        self.epsilon = max(self.epsilon_min, self.epsilon)
+        
+        # explore vs exploit
+        if np.random.random() < self.epsilon:
+            return self.env.action_space.sample()
+
+        return Action(np.argmax(self.model.predict(obs)[0]))
+
+    def remember(self, obs, action, reward, next_obs, done):
+        """
+        Create history of previous actions and their affects on states.
+
+        Args:
+            obs (object): current observation of environment
+            action (Action): the action that was taken
+            reward (float): amount of reward after action
+            next_obs (object): observation of environment after action
+            done (bool): whether the episode has ended
+        """
+        self.memory.append([obs, action, reward, next_obs, done])
 
     def replay(self):
-        pass
+        """
+        Replay random previous examples from memory and update the model with a new associated
+        Q value.
+        """
+        # wait until enough actions have been performed to train the model
+        if len(self.memory) < self.batch_size:
+            return
+
+        samples = random.sample(self.memory, self.batch_size)
+        for sample in samples:
+            obs, action, reward, next_obs, done = sample
+            target = self.target_model.predict(obs)
+            if done:
+                target[0][action.value] = reward
+            else:
+                # bellman update equation
+                next_Q = max(self.target_model.predict(next_obs)[0])
+                target[0][action.value] = reward + next_Q * self.gamma
+            self.model.fit(obs, target, epochs=1, verbose=0)
+
 
     def target_train(self):
-        pass
+        """
+        Update the weights of the target model. The target model is essentially a more stable
+        version of the main model. This update is weighted by parameter tau.
+        """
+        
+        weights = self.model.get_weights()
+        target_weights = self.target_model.get_weights()
+        
+        # scale target weights with model weights and tau
+        for i in range(len(target_weights)):
+            target_weights[i] = weights[i] * self.tau + target_weights[i] * (1-self.tau)        
+        self.target_model.set_weights(target_weights)
 
-    def save_model(self):
-        pass
+    def save_model(self, path):
+        """
+        Save the main model weights to a given path.
+
+        Inputs:
+            path (string): path to the saved model file
+        """
+        self.model.save(path)
 
 
 def main():
     # Constants
     GAMMA   = 0.9
     EPSILON = .95
-
+    EPSILON_DECAY = 0.995
+    TAU = 0.125
+    MAX_MEM = 100000
+    LEARNING_RATE = 0.005
+    BATCH_SIZE = 32
+    
     EPISODES  = 1000
     STEPS = 500
 
@@ -44,7 +143,8 @@ def main():
     env = gym.make("gym_airsim:airsim-v0")
 
     # Create deep q-learning agent
-    dqn_agent = DQNAgent(env=env)
+    dqn_agent = DQNAgent(env=env, max_mem=MAX_MEM, gamma=GAMMA, epsilon=EPSILON, tau=TAU,
+                         batch_size=BATCH_SIZE, learning_rate=LEARNING_RATE)
 
     # Run episodes
     for episode in range(EPISODES):
@@ -54,16 +154,21 @@ def main():
 
         # Loop until episode is done or it reached the max # of steps
         while True:
-            action = Action(env.action_space.sample())
-            # action = Action.YAW_RIGHT
-            obs, reward, done, _ = env.step(action)
+            # perform action
+            action = dqn_agent.act(obs)
+            next_obs, reward, done, _ = env.step(action)
+
+            # fit model with new actions
+            dqn_agent.remember(obs, action, reward, next_obs, done)
+            dqn_agent.replay()
+            dqn_agent.target_train()
+
             if step >= STEPS:
                 print(f"\nReached max # of steps")
-                break
             if done:
                 print(f"\nDone")
                 break
-            print(f"Actions taken: {step:02d}, Action: {action.name}", end='\r')
+            print(f"Actions taken: {step:02d}, Action: {action.name}, Reward: {reward}", end='\r')
             step += 1
     pass
 
