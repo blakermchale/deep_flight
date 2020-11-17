@@ -57,6 +57,6 @@ class MyAirSimClient(MultirotorClient):
         img2d = np.reshape(img1d, (responses[0].height, responses[0].width))
 
         image = Image.fromarray(img2d)
-        im_final = np.array(image.resize((84, 84)).convert('L'))
+        im_final = np.array(image.resize((84, 84)).convert('L')).reshape(-1, 84, 84, 1)
         
         return im_final

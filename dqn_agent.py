@@ -44,6 +44,7 @@ class DQNAgent:
         # output layer
         model.add(Dense(self.env.action_space.n))
         model.compile(loss="mean_squared_error", optimizer=Adam(lr=self.learning_rate))
+        print(model.summary())
         return model
 
     def act(self, obs):
@@ -63,8 +64,9 @@ class DQNAgent:
         
         # explore vs exploit
         if np.random.random() < self.epsilon:
-            return self.env.action_space.sample()
+            return Action(self.env.action_space.sample())
 
+        print("obs shape %s\n" % str(obs.shape))
         return Action(np.argmax(self.model.predict(obs)[0]))
 
     def remember(self, obs, action, reward, next_obs, done):
@@ -92,6 +94,9 @@ class DQNAgent:
         samples = random.sample(self.memory, self.batch_size)
         for sample in samples:
             obs, action, reward, next_obs, done = sample
+            print("obs shape (%f,%f)\n" % (obs.shape[0], obs.shape[1]))
+            print("next_obs shape (%f,%f)\n" % (next_obs.shape[0], next_obs.shape[1]))
+
             target = self.target_model.predict(obs)
             if done:
                 target[0][action.value] = reward
@@ -163,6 +168,7 @@ def main():
             dqn_agent.replay()
             dqn_agent.target_train()
 
+            obs = next_obs
             if step >= STEPS:
                 print(f"\nReached max # of steps")
             if done:

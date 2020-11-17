@@ -36,7 +36,7 @@ class AirSimEnv(gym.Env):
         self.goal = np.array([10., 10., 3.])
 
         # Gym needs a defined object structure for observations and actions
-        self.observation_space = spaces.Box(low=0, high=255, shape=(84,84))
+        self.observation_space = spaces.Box(low=0, high=255, shape=(84,84,1))
         self.action_space = spaces.Discrete(9)
         
     def seed(self, seed=None):
