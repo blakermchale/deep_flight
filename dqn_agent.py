@@ -2,10 +2,12 @@ import gym
 import numpy as np
 import random
 from collections import deque
+import time
 
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Dropout, Conv2D, Flatten
 from tensorflow.keras.optimizers import Adam
+import tensorflow as tf
 
 from gym_airsim.envs.airsim_env import Action
 
@@ -92,8 +94,12 @@ class DQNAgent:
             return
 
         samples = random.sample(self.memory, self.batch_size)
+        obs_lst = []
+        target_lst = []
         for sample in samples:
             obs, action, reward, next_obs, done = sample
+            # obs_lst.append(obs)
+            
             # print("obs shape (%f,%f)\n" % (obs.shape[0], obs.shape[1]))
             # print("next_obs shape (%f,%f)\n" % (next_obs.shape[0], next_obs.shape[1]))
 
@@ -102,14 +108,24 @@ class DQNAgent:
             # import airsim
             # airsim.write_png(os.path.normpath('image.png'), obs.reshape(84,84)) 
 
+            start = time.time()
             target = self.target_model.predict(obs)
+            predict_dt = time.time() - start
             if done:
                 target[0][action.value] = reward
             else:
                 # bellman update equation
                 next_Q = max(self.target_model.predict(next_obs)[0])
                 target[0][action.value] = reward + next_Q * self.gamma
+            start = time.time()
             self.model.fit(obs, target, epochs=1, verbose=0)
+            fit_dt = time.time() - start
+            print(f"Predict DT: {predict_dt:.2f}, Fit DT: {fit_dt:.2f}")
+            # target_lst.append(target)
+        # start = time.time()
+        # self.model.train_on_batch(obs_lst, target_lst)
+        # fit_dt = time.time() - start
+        # print(f"Fit DT: {fit_dt:.2f}")
 
 
     def target_train(self):
@@ -124,6 +140,7 @@ class DQNAgent:
         # scale target weights with model weights and tau
         for i in range(len(target_weights)):
             target_weights[i] = weights[i] * self.tau + target_weights[i] * (1-self.tau)        
+        
         self.target_model.set_weights(target_weights)
 
     def save_model(self, path):
@@ -137,6 +154,19 @@ class DQNAgent:
 
 
 def main():
+    # allow for GPU on windows
+    gpus = tf.config.experimental.list_physical_devices('GPU')
+    if gpus:
+        try:
+            # Currently, memory growth needs to be the same across GPUs
+            for gpu in gpus:
+                tf.config.experimental.set_memory_growth(gpu, True)
+            logical_gpus = tf.config.experimental.list_logical_devices('GPU')
+            print(len(gpus), "Physical GPUs,", len(logical_gpus), "Logical GPUs")
+        except RuntimeError as e:
+            # Memory growth must be set before GPUs have been initialized
+            print(e)
+
     # Constants
     GAMMA   = 0.9
     EPSILON = .95
@@ -171,9 +201,15 @@ def main():
             next_obs, reward, done, _ = env.step(action)
 
             # fit model with new actions
+            start = time.time()
             dqn_agent.remember(obs, action, reward, next_obs, done)
+            rem_dt = time.time() - start
+            start = time.time()
             dqn_agent.replay()
+            rep_dt = time.time() - start
+            start = time.time()
             dqn_agent.target_train()
+            targ_dt = time.time() - start
 
             obs = next_obs
             if step >= STEPS:
@@ -186,8 +222,11 @@ def main():
             has_collided, curr_pos = env.client.getState()
             print(f"Step: {step:02d} \tAction: {action.name} \t\tReward: {reward:.2f}" + 
                     f"\tPosition: ({curr_pos[0]:.2f}, {curr_pos[1]:.2f}, {curr_pos[2]:.2f}) " +
-                    f"\tCollided: {has_collided}", end='\r')
+                    f"\tCollided: {has_collided}, REM DT: {rem_dt:.2f}, REP DT: {rep_dt:.2f}, TARG DT: {targ_dt:.2f}", end='\r')
             step += 1
+
+        if episode % 50 == 0:
+            dqn_agent.save_model("ep-{}.model".format(episode))
 
 
 if __name__ == "__main__":
