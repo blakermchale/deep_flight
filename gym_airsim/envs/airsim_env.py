@@ -80,9 +80,7 @@ class AirSimEnv(gym.Env):
             reward (float): reward for current state
             done (bool): True if the vehicle has collided or near the goal
         """
-        has_collided = self.client.simGetCollisionInfo().has_collided
-        curr_pos = self.client.getMultirotorState().kinematics_estimated.position
-        curr_pos = np.array([curr_pos.x_val, curr_pos.y_val, curr_pos.z_val])
+        has_collided, curr_pos = self.client.getState()
 
         done = False
         reward = 0

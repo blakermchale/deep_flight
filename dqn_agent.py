@@ -66,7 +66,7 @@ class DQNAgent:
         if np.random.random() < self.epsilon:
             return Action(self.env.action_space.sample())
 
-        print("obs shape %s\n" % str(obs.shape))
+        # print("obs shape %s\n" % str(obs.shape))
         return Action(np.argmax(self.model.predict(obs)[0]))
 
     def remember(self, obs, action, reward, next_obs, done):
@@ -94,8 +94,13 @@ class DQNAgent:
         samples = random.sample(self.memory, self.batch_size)
         for sample in samples:
             obs, action, reward, next_obs, done = sample
-            print("obs shape (%f,%f)\n" % (obs.shape[0], obs.shape[1]))
-            print("next_obs shape (%f,%f)\n" % (next_obs.shape[0], next_obs.shape[1]))
+            # print("obs shape (%f,%f)\n" % (obs.shape[0], obs.shape[1]))
+            # print("next_obs shape (%f,%f)\n" % (next_obs.shape[0], next_obs.shape[1]))
+
+            # write to png 
+            # import os
+            # import airsim
+            # airsim.write_png(os.path.normpath('image.png'), obs.reshape(84,84)) 
 
             target = self.target_model.predict(obs)
             if done:
@@ -139,6 +144,7 @@ def main():
     TAU = 0.125
     MAX_MEM = 100000
     LEARNING_RATE = 0.005
+
     BATCH_SIZE = 32
     
     EPISODES  = 1000
@@ -154,6 +160,7 @@ def main():
     # Run episodes
     for episode in range(EPISODES):
         # Reset environment and variables
+        print(f"Episode: {episode}")
         step = 0
         obs = env.reset()
 
@@ -171,12 +178,16 @@ def main():
             obs = next_obs
             if step >= STEPS:
                 print(f"\nReached max # of steps")
+                break
             if done:
                 print(f"\nDone")
                 break
-            print(f"Actions taken: {step:02d}, Action: {action.name}, Reward: {reward}", end='\r')
+            
+            has_collided, curr_pos = env.client.getState()
+            print(f"Step: {step:02d} \tAction: {action.name} \t\tReward: {reward:.2f}" + 
+                    f"\tPosition: ({curr_pos[0]:.2f}, {curr_pos[1]:.2f}, {curr_pos[2]:.2f}) " +
+                    f"\tCollided: {has_collided}", end='\r')
             step += 1
-    pass
 
 
 if __name__ == "__main__":

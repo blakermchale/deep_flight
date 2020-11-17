@@ -3,7 +3,7 @@
     "SettingsVersion": 1.2,
     "SimMode": "Multirotor",
     "ViewMode": "SpringArmChase",
-    "ClockSpeed": 10.0,
+    "ClockSpeed": 1000.0,
     "Vehicles": {
       "SimpleFlight": {
         "VehicleType": "SimpleFlight",
