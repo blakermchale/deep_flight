@@ -51,13 +51,18 @@ class MyAirSimClient(MultirotorClient):
         """
         Downsample depth image from camera.
         """
-        responses = self.simGetImages([airsim.ImageRequest(self.camera_name, airsim.ImageType.DepthPerspective, True, False)])
-        img1d = np.array(responses[0].image_data_float, dtype=np.float)
+        while True:
+            responses = self.simGetImages([airsim.ImageRequest(self.camera_name, airsim.ImageType.DepthPerspective, True, False)])
+            img1d = np.array(responses[0].image_data_float, dtype=np.float)
+            if responses[0].height != 0 and responses[0].width != 0:
+                break
+            print("Error getting image! Trying again!")
         img1d = 255/np.maximum(np.ones(img1d.size), img1d) # not sure what this is
         img2d = np.reshape(img1d, (responses[0].height, responses[0].width))
 
         image = Image.fromarray(img2d)
         im_final = np.array(image.resize((84, 84)).convert('L')).reshape(-1, 84, 84, 1)
+        # im_final = np.array(image.resize((84, 84)).convert('L'))
         
         return im_final
 

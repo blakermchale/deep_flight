@@ -2,7 +2,7 @@
 import logging
 import numpy as np
 import random
-from enum import Enum
+from enum import IntEnum
 
 import gym
 from gym import spaces
@@ -13,7 +13,7 @@ from gym_airsim.envs.MyAirSimClient import MyAirSimClient
 logger = logging.getLogger(__name__)
 
 
-class Action(Enum):
+class Action(IntEnum):
     NONE = 0
     INC_VEL_X = 1
     DEC_VEL_X = 2
@@ -33,10 +33,10 @@ class AirSimEnv(gym.Env):
 
     def __init__(self):
         self.client = MyAirSimClient()
-        self.goal = np.array([10., 10., 3.])
+        self.goal = np.array([10., 10., -3.])
 
         # Gym needs a defined object structure for observations and actions
-        self.observation_space = spaces.Box(low=0, high=255, shape=(84,84,1))
+        self.observation_space = spaces.Box(low=0, high=255, shape=(84,84, 1))
         self.action_space = spaces.Discrete(9)
         
     def seed(self, seed=None):
@@ -56,12 +56,14 @@ class AirSimEnv(gym.Env):
             done (bool): whether the episode has ended, in which case further step() calls will return undefined results
             info (dict): contains auxiliary diagnostic information (helpful for debugging, and sometimes learning)
         """
-        info = None
+        info = {}
         velOffsetCmd = self.interpret_action(action)
         self.client.modifyVel(velOffsetCmd)
     
         observation = self.client.getDepthImage()
-        reward, done = self.compute_reward()
+        reward, done, distance = self.compute_reward()
+
+        info["distance"] = distance
 
         return observation, reward, done, info
         
@@ -84,6 +86,7 @@ class AirSimEnv(gym.Env):
 
         done = False
         reward = 0
+        distance = None
         if has_collided:
             reward = self.COLLISION_REWARD
             done = True
@@ -96,7 +99,7 @@ class AirSimEnv(gym.Env):
                 dist_from_home = np.linalg.norm(self.goal - self.client.home)
                 reward += (self.GOAL_REWARD / 2.) * ((dist_from_home - distance) / dist_from_home)
 
-        return reward, done
+        return reward, done, distance
 
     def interpret_action(self, action):
         """

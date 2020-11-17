@@ -9,6 +9,11 @@ from tensorflow.keras.layers import Dense, Dropout, Conv2D, Flatten
 from tensorflow.keras.optimizers import Adam
 import tensorflow as tf
 
+from rl.agents.dqn import DQNAgent
+from rl.policy import LinearAnnealedPolicy, BoltzmannQPolicy, EpsGreedyQPolicy
+from rl.memory import SequentialMemory
+from rl.core import Processor
+
 from gym_airsim.envs.airsim_env import Action
 
 
@@ -108,19 +113,19 @@ class DQNAgent:
             # import airsim
             # airsim.write_png(os.path.normpath('image.png'), obs.reshape(84,84)) 
 
-            start = time.time()
+            # start = time.time()
             target = self.target_model.predict(obs)
-            predict_dt = time.time() - start
+            # predict_dt = time.time() - start
             if done:
                 target[0][action.value] = reward
             else:
                 # bellman update equation
                 next_Q = max(self.target_model.predict(next_obs)[0])
                 target[0][action.value] = reward + next_Q * self.gamma
-            start = time.time()
+            # start = time.time()
             self.model.fit(obs, target, epochs=1, verbose=0)
-            fit_dt = time.time() - start
-            print(f"Predict DT: {predict_dt:.2f}, Fit DT: {fit_dt:.2f}")
+            # fit_dt = time.time() - start
+            # print(f"Predict DT: {predict_dt:.2f}, Fit DT: {fit_dt:.2f}")
             # target_lst.append(target)
         # start = time.time()
         # self.model.train_on_batch(obs_lst, target_lst)
@@ -198,7 +203,7 @@ def main():
         while True:
             # perform action
             action = dqn_agent.act(obs)
-            next_obs, reward, done, _ = env.step(action)
+            next_obs, reward, done, info = env.step(action)
 
             # fit model with new actions
             start = time.time()
@@ -220,9 +225,11 @@ def main():
                 break
             
             has_collided, curr_pos = env.client.getState()
-            print(f"Step: {step:02d} \tAction: {action.name} \t\tReward: {reward:.2f}" + 
-                    f"\tPosition: ({curr_pos[0]:.2f}, {curr_pos[1]:.2f}, {curr_pos[2]:.2f}) " +
-                    f"\tCollided: {has_collided}, REM DT: {rem_dt:.2f}, REP DT: {rep_dt:.2f}, TARG DT: {targ_dt:.2f}", end='\r')
+            distance = info["distance"]
+            print(f"Step: {step:02d} Action: {action.name:10} Reward: {reward:+.2f} "
+                  f"Position: ({curr_pos[0]:+.2f}, {curr_pos[1]:+.2f}, {curr_pos[2]:+.2f}) "
+                  f"Distance: {distance:+.2f} "
+                  f"Collided: {has_collided} REM DT: {rem_dt:.2f} REP DT: {rep_dt:.2f} TARG DT: {targ_dt:.2f}", end='\r')
             step += 1
 
         if episode % 50 == 0:
