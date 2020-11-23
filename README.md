@@ -51,3 +51,4 @@ python dqn_agent.py
 [DQN with Keras](https://towardsdatascience.com/reinforcement-learning-w-keras-openai-dqns-1eed3a5338c)  
 [Official AirSim DQN](https://github.com/microsoft/AirSim/blob/d59ceb7f63878f5e087ea802d603ba0fd282ff56/PythonClient/multirotor/DQNdrone.py)  
 [AirGym](https://github.com/Kjell-K/AirGym)
+[Another Paper Ex](https://www.mdpi.com/2076-3417/9/24/5571/htm)
