@@ -1,7 +1,7 @@
 # Deep Flight Ignores
 Environments/Blocks/Saved/*
 .vscode/
-training_results/
+training_results*/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

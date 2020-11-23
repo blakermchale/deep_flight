@@ -3,15 +3,18 @@ import pandas as pd
 import json
 from glob import glob
 
-
+# %%
 def main():
-    with open(glob("training_results/openaigym.episode_batch*")[0]) as f:
+    with open(glob("training_results_1123/openaigym.episode_batch*")[0]) as f:
         gym_dict = json.load(f)
     gym_dict.pop("episode_types")
     initial_reset_timestamp = gym_dict.pop("initial_reset_timestamp")
 
     df = pd.DataFrame(gym_dict)
     df["timestamps"] = df["timestamps"] - initial_reset_timestamp
+
+    # Filter outliers
+    df[df["episode_rewards"]]
 
     plt.figure()
     plt.plot(df["timestamps"], df["episode_rewards"])
@@ -30,3 +33,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# %%

@@ -9,11 +9,6 @@ from tensorflow.keras.layers import Dense, Dropout, Conv2D, Flatten
 from tensorflow.keras.optimizers import Adam
 import tensorflow as tf
 
-from rl.agents.dqn import DQNAgent
-from rl.policy import LinearAnnealedPolicy, BoltzmannQPolicy, EpsGreedyQPolicy
-from rl.memory import SequentialMemory
-from rl.core import Processor
-
 from gym_airsim.envs.airsim_env import Action
 
 
@@ -225,7 +220,14 @@ def main():
             dqn_agent.target_train()
             targ_dt = time.time() - start
 
-            obs = next_obs
+            curr_pos = info["curr_pos"]
+            distance = info["distance"]
+            has_collided = info["has_collided"]
+            print(f"Step: {step:02d} Action: {action.name:10} Reward: {reward:+.2f} "
+                  f"Position: ({curr_pos[0]:+.2f}, {curr_pos[1]:+.2f}, {curr_pos[2]:+.2f}) "
+                  f"Distance: {distance:+.2f} "
+                  f"Collided: {has_collided} REM DT: {rem_dt:.2f} REP DT: {rep_dt:.2f} TARG DT: {targ_dt:.2f}", end='\r')
+
             if step >= STEPS:
                 print(f"\nReached max # of steps")
                 break
@@ -233,12 +235,7 @@ def main():
                 print(f"\nDone")
                 break
             
-            has_collided, curr_pos = env.client.getState()
-            distance = info["distance"]
-            print(f"Step: {step:02d} Action: {action.name:10} Reward: {reward:+.2f} "
-                  f"Position: ({curr_pos[0]:+.2f}, {curr_pos[1]:+.2f}, {curr_pos[2]:+.2f}) "
-                  f"Distance: {distance:+.2f} "
-                  f"Collided: {has_collided} REM DT: {rem_dt:.2f} REP DT: {rep_dt:.2f} TARG DT: {targ_dt:.2f}", end='\r')
+            obs = next_obs
             step += 1
 
         if episode % 50 == 0:

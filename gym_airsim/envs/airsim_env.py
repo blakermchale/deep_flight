@@ -62,9 +62,7 @@ class AirSimEnv(gym.Env):
         self.client.modifyVel(velOffsetCmd)
     
         observation = self.client.getDepthImage()
-        reward, done, distance = self.compute_reward()
-
-        info["distance"] = distance
+        reward, done, info = self.compute_reward()
 
         return observation, reward, done, info
         
@@ -85,6 +83,7 @@ class AirSimEnv(gym.Env):
         """
         has_collided, curr_pos = self.client.getState()
 
+        info = {}
         done = False
         reward = 0
         distance = None
@@ -100,7 +99,10 @@ class AirSimEnv(gym.Env):
                 dist_from_home = np.linalg.norm(self.goal - self.client.home)
                 reward += self.MAX_DIST_REWARD * ((dist_from_home - distance) / dist_from_home)
 
-        return reward, done, distance
+        info["distance"] = distance
+        info["has_collided"] = has_collided
+        info["curr_pos"] = curr_pos
+        return reward, done, info
 
     def interpret_action(self, action):
         """
