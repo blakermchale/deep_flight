@@ -185,8 +185,17 @@ def main():
     EPISODES  = 1000
     STEPS = 500
 
+    OUT_DIR = "training_results/"
+
     # Create gym environment
     env = gym.make("gym_airsim:airsim-v0")
+    env = gym.wrappers.Monitor(env, OUT_DIR, force=True)
+     # TODO: Is this needed?
+     #  Currently needed since gym monitor wrapper requires that an env reach a done state to reset
+    STEPS = env.spec.max_episode_steps - 1 
+
+    # Set goal
+    env.goal = np.array([10., 0., -3.])
 
     # Create deep q-learning agent
     dqn_agent = DQNAgent(env=env, max_mem=MAX_MEM, gamma=GAMMA, epsilon=EPSILON, tau=TAU,

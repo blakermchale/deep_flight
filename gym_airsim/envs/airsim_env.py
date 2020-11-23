@@ -27,8 +27,9 @@ class Action(IntEnum):
 
 class AirSimEnv(gym.Env):
 
-    GOAL_REWARD = 100.
-    COLLISION_REWARD = -100.
+    GOAL_REWARD = 1000.
+    COLLISION_REWARD = -1000.
+    MAX_DIST_REWARD = 100.
     DIST_THRESH = 1.0
 
     def __init__(self):
@@ -97,7 +98,7 @@ class AirSimEnv(gym.Env):
                 done = True
             else:
                 dist_from_home = np.linalg.norm(self.goal - self.client.home)
-                reward += (self.GOAL_REWARD / 2.) * ((dist_from_home - distance) / dist_from_home)
+                reward += self.MAX_DIST_REWARD * ((dist_from_home - distance) / dist_from_home)
 
         return reward, done, distance
 
