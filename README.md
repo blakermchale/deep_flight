@@ -46,6 +46,8 @@ python dqn_agent.py
 
 ## Resources
 
+[Our Google Drive](https://drive.google.com/drive/u/1/folders/1pUoStc6qpU9d41R7aaGgp70TfvcZjjC6)
+
 [DQN with Keras](https://towardsdatascience.com/reinforcement-learning-w-keras-openai-dqns-1eed3a5338c)  
 [Official AirSim DQN](https://github.com/microsoft/AirSim/blob/d59ceb7f63878f5e087ea802d603ba0fd282ff56/PythonClient/multirotor/DQNdrone.py)  
 [AirGym](https://github.com/Kjell-K/AirGym)
