@@ -28,6 +28,9 @@ cd Environments\Blocks
 ## Running
 
 Copy `settings.json` to Documents\AirSim.
+``` powershell
+cp .\settings.json $HOME\Documents\AirSim\
+```
 
 Open [Environments/Blocks/Blocks.sln](Environments/Blocks/Blocks.sln) in visual studio. Press `F5`.
 

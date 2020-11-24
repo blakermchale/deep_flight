@@ -49,13 +49,14 @@ class DQNAgent:
         print(model.summary())
         return model
 
-    def act(self, obs):
+    def act(self, obs, test=False):
         """
         Chose to take an action which is either random or from the model.
-        Based on epsilon (explor probability)
+        Based on epsilon (explore probability)
         
         Args:
             obs (object): current observation of environment
+            test (bool): flag for turning off explore for testing
 
         Returns:
             action (Action): action to take
@@ -65,7 +66,7 @@ class DQNAgent:
         self.epsilon = max(self.epsilon_min, self.epsilon)
         
         # explore vs exploit
-        if np.random.random() < self.epsilon:
+        if np.random.random() < self.epsilon and not test:
             return Action(self.env.action_space.sample())
 
         # print("obs shape %s\n" % str(obs.shape))
@@ -145,12 +146,21 @@ class DQNAgent:
 
     def save_model(self, path):
         """
-        Save the main model weights to a given path.
+        Save the main model to a given path.
 
-        Inputs:
-            path (string): path to the saved model file
+        Args:
+            path (string): path to the saved model folder
         """
         self.model.save(path)
+
+    def load_model(self, path):
+        """
+        Loads model from given path.
+
+        Args:
+            path (string): path to the model folder
+        """
+        self.model = tf.keras.models.load_model(path)
 
 
 def main():
@@ -167,6 +177,11 @@ def main():
             # Memory growth must be set before GPUs have been initialized
             print(e)
 
+    # Variables for training and testing
+    train = False
+    model_path = "ep-550.model"
+    use_old_model = True  # For loading model for training
+
     # Constants
     GAMMA   = 0.9
     EPSILON = .95
@@ -178,7 +193,7 @@ def main():
     BATCH_SIZE = 32
     
     EPISODES  = 1000
-    STEPS = 500
+    # STEPS = 500
 
     OUT_DIR = "training_results/"
 
@@ -190,43 +205,83 @@ def main():
     STEPS = env.spec.max_episode_steps - 1 
 
     # Set goal
-    env.goal = np.array([10., 0., -3.])
+    env.goal = np.array([72.214,  -3.348, -3.])
 
     # Create deep q-learning agent
     dqn_agent = DQNAgent(env=env, max_mem=MAX_MEM, gamma=GAMMA, epsilon=EPSILON, tau=TAU,
                          batch_size=BATCH_SIZE, learning_rate=LEARNING_RATE)
 
-    # Run episodes
-    for episode in range(EPISODES):
-        # Reset environment and variables
-        print(f"Episode: {episode}")
+    if train:
+        episode = 0
+        if use_old_model:
+            dqn_agent.load_model(model_path)
+            episode = int(model_path.split('.')[0].split('-')[-1]) + 1
+            print(f"Loading model from episode {episode - 1}, starting one ahead")
+        # Run episodes
+        while episode < EPISODES:
+            # Reset environment and variables
+            print(f"Episode: {episode}")
+            step = 0
+            obs = env.reset()
+
+            # Loop until episode is done or it reached the max # of steps
+            while True:
+                # perform action
+                action = dqn_agent.act(obs)
+                next_obs, reward, done, info = env.step(action)
+
+                # fit model with new actions
+                start = time.time()
+                dqn_agent.remember(obs, action, reward, next_obs, done)
+                rem_dt = time.time() - start
+                start = time.time()
+                dqn_agent.replay()
+                rep_dt = time.time() - start
+                start = time.time()
+                dqn_agent.target_train()
+                targ_dt = time.time() - start
+
+                curr_pos = info["curr_pos"]
+                distance = info["distance"]
+                has_collided = info["has_collided"]
+                print(f"Step: {step:02d} Action: {action.name:10} Reward: {reward:+.2f} "
+                    f"Position: ({curr_pos[0]:+.2f}, {curr_pos[1]:+.2f}, {curr_pos[2]:+.2f}) "
+                    f"Distance: {distance:+.2f} "
+                    f"Collided: {has_collided} REM DT: {rem_dt:.2f} REP DT: {rep_dt:.2f} TARG DT: {targ_dt:.2f}", end='\r')
+
+                if step >= STEPS:
+                    print(f"\nReached max # of steps")
+                    break
+                if done:
+                    print(f"\nDone")
+                    break
+                
+                obs = next_obs
+                step += 1
+
+            if episode % 50 == 0:
+                dqn_agent.save_model("ep-{}.model".format(episode))
+            episode += 1
+    else: # TEST
+        print(f"Runing tests with model from {model_path}")
+        dqn_agent.load_model(model_path)
         step = 0
         obs = env.reset()
-
+        env.client.startRecording()
+        print("Started recording AirSim data to Documents")
         # Loop until episode is done or it reached the max # of steps
         while True:
             # perform action
-            action = dqn_agent.act(obs)
+            action = dqn_agent.act(obs, test=True)
             next_obs, reward, done, info = env.step(action)
-
-            # fit model with new actions
-            start = time.time()
-            dqn_agent.remember(obs, action, reward, next_obs, done)
-            rem_dt = time.time() - start
-            start = time.time()
-            dqn_agent.replay()
-            rep_dt = time.time() - start
-            start = time.time()
-            dqn_agent.target_train()
-            targ_dt = time.time() - start
 
             curr_pos = info["curr_pos"]
             distance = info["distance"]
             has_collided = info["has_collided"]
-            print(f"Step: {step:02d} Action: {action.name:10} Reward: {reward:+.2f} "
-                  f"Position: ({curr_pos[0]:+.2f}, {curr_pos[1]:+.2f}, {curr_pos[2]:+.2f}) "
-                  f"Distance: {distance:+.2f} "
-                  f"Collided: {has_collided} REM DT: {rem_dt:.2f} REP DT: {rep_dt:.2f} TARG DT: {targ_dt:.2f}", end='\r')
+            print(f"Step: {step:03d} Action: {action.name:10} Reward: {reward:+7.2f} "
+                f"Position: ({curr_pos[0]:+6.2f}, {curr_pos[1]:+6.2f}, {curr_pos[2]:+6.2f}) "
+                f"Distance: {distance:+6.2f} "
+                f"Collided: {has_collided}", end='\r')
 
             if step >= STEPS:
                 print(f"\nReached max # of steps")
@@ -237,9 +292,8 @@ def main():
             
             obs = next_obs
             step += 1
-
-        if episode % 50 == 0:
-            dqn_agent.save_model("ep-{}.model".format(episode))
+        env.client.stopRecording()
+        print("Stopped recording AirSim data, placed in Documents/AirSim")
 
 
 if __name__ == "__main__":

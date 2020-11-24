@@ -86,7 +86,7 @@ class AirSimEnv(gym.Env):
         info = {}
         done = False
         reward = 0
-        distance = None
+        distance = np.nan
         if has_collided:
             reward = self.COLLISION_REWARD
             done = True

@@ -4,6 +4,13 @@
     "SimMode": "Multirotor",
     "ViewMode": "SpringArmChase",
     "ClockSpeed": 1000.0,
+    "Recording": {
+      "RecordOnMove": false,
+      "RecordInterval": 0.05,
+      "Cameras": [
+          { "CameraName": "front_center_custom", "ImageType": 0, "PixelsAsFloat": false, "Compress": true }
+      ]
+    },
     "Vehicles": {
       "SimpleFlight": {
         "VehicleType": "SimpleFlight",
