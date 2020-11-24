@@ -244,9 +244,9 @@ def main():
                 curr_pos = info["curr_pos"]
                 distance = info["distance"]
                 has_collided = info["has_collided"]
-                print(f"Step: {step:02d} Action: {action.name:10} Reward: {reward:+.2f} "
-                    f"Position: ({curr_pos[0]:+.2f}, {curr_pos[1]:+.2f}, {curr_pos[2]:+.2f}) "
-                    f"Distance: {distance:+.2f} "
+                print(f"Step: {step:03d} Action: {action.name:10} Reward: {reward:+7.2f} "
+                    f"Position: ({curr_pos[0]:+6.2f}, {curr_pos[1]:+6.2f}, {curr_pos[2]:+6.2f}) "
+                    f"Distance: {distance:+6.2f} "
                     f"Collided: {has_collided} REM DT: {rem_dt:.2f} REP DT: {rep_dt:.2f} TARG DT: {targ_dt:.2f}", end='\r')
 
                 if step >= STEPS:
