@@ -12,18 +12,11 @@ from gym_airsim.envs.MyAirSimClient import MyAirSimClient
 
 logger = logging.getLogger(__name__)
 
-
 class Action(IntEnum):
-    NONE = 0
-    INC_VEL_X = 1
-    DEC_VEL_X = 2
-    INC_VEL_Y = 3
-    DEC_VEL_Y = 4
-    INC_VEL_Z = 5
-    DEC_VEL_Z = 6
-    YAW_RIGHT = 7
-    YAW_LEFT = 8
-
+    INC_FORWARD_VEL = 0
+    DEC_FORWARD_VEL = 1 
+    YAW_LEFT = 2 
+    YAW_RIGHT = 3
 
 class AirSimEnv(gym.Env):
 
@@ -38,7 +31,7 @@ class AirSimEnv(gym.Env):
 
         # Gym needs a defined object structure for observations and actions
         self.observation_space = spaces.Box(low=0, high=255, shape=(84,84, 1))
-        self.action_space = spaces.Discrete(9)
+        self.action_space = spaces.Discrete(4)
         
     def seed(self, seed=None):
         self.np_random, seed = seeding.np_random(seed)
@@ -58,11 +51,15 @@ class AirSimEnv(gym.Env):
             info (dict): contains auxiliary diagnostic information (helpful for debugging, and sometimes learning)
         """
         info = {}
-        velOffsetCmd = self.interpret_action(action)
-        self.client.modifyVel(velOffsetCmd)
-    
+        velOffsetCmd, yaw_rate = self.interpret_action(action)
+
+        #TODO: freezes after some steps w/ pause function
+        # self.client.simPause(False)
+        has_collided = self.client.modifyVel(velOffsetCmd, yaw_rate)
+        # self.client.simPause(True)
+
         observation = self.client.getDepthImage()
-        reward, done, info = self.compute_reward()
+        reward, done, info = self.compute_reward(has_collided)
 
         return observation, reward, done, info
         
@@ -71,17 +68,19 @@ class AirSimEnv(gym.Env):
         Resets the state of the environment and returns an initial observation.
         """
         self.client.sim_reset()
+        self.client.curr_vel = np.zeros((1,3))
         return self.client.getDepthImage()
 
-    def compute_reward(self):
+    def compute_reward(self, has_collided):
         """
         Computes reward for current state.
-
+        Args:
+            has_collided: (bool): flag returned after taking action if drone collided
         Returns:
             reward (float): reward for current state
             done (bool): True if the vehicle has collided or near the goal
         """
-        has_collided, curr_pos = self.client.getState()
+        _, curr_pos = self.client.getState()
 
         info = {}
         done = False
@@ -112,31 +111,21 @@ class AirSimEnv(gym.Env):
             action (Action): enum to chose what action to take
 
         Returns:
-            offset (tuple(double, double, double, double)): x, y, z, yaw rate
+            offset (tuple(double, double)): vel offset, yaw rate
         """
         # Actions
-        vel_offset = 0.25 # m/s
+        vel_offset = 1 # m/s
         yaw_rate = 15 # deg/s
 
-        if action == Action.NONE:
-            offset = (0, 0, 0, 0)
-        elif action == Action.INC_VEL_X:
-            offset = (vel_offset, 0, 0, 0)
-        elif action == Action.DEC_VEL_X:
-            offset = (-vel_offset, 0, 0, 0)
-        elif action == Action.INC_VEL_Y:
-            offset = (0, vel_offset, 0, 0)
-        elif action == Action.DEC_VEL_Y:
-            offset = (0, -vel_offset, 0, 0)
-        elif action == Action.INC_VEL_Z:
-            offset = (0, 0, vel_offset, 0)
-        elif action == Action.DEC_VEL_Z:
-            offset = (0, 0, -vel_offset, 0)
+        if action == Action.INC_FORWARD_VEL:
+            offset = (vel_offset, 0)
+        elif action == Action.DEC_FORWARD_VEL:
+            offset = (-vel_offset, 0)
         elif action == Action.YAW_RIGHT:
-            offset = (0, 0, 0, yaw_rate)
+            offset = (0, yaw_rate)
         elif action == Action.YAW_LEFT:
-            offset = (0, 0, 0, -yaw_rate)
+            offset = (0, -yaw_rate)
         else:
             raise ValueError(f"Action does not exist: {action}")
 
-        return offset       
+        return offset

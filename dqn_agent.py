@@ -3,6 +3,7 @@ import numpy as np
 import random
 from collections import deque
 import time
+import argparse
 
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Dropout, Conv2D, Flatten
@@ -164,6 +165,12 @@ class DQNAgent:
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--train", default='True', type=eval, choices=[True, False], help="Flag to test the model instead of train.")
+    parser.add_argument("--use_old_model", default='True', type=eval, choices=[True, False], help="Flag to start training/testing with a given model")
+    parser.add_argument("--model_path", default='ep-550.model', help="Path to the model to be loaded for testing/training")
+    args = parser.parse_args()
+
     # allow for GPU on windows
     gpus = tf.config.experimental.list_physical_devices('GPU')
     if gpus:
@@ -177,11 +184,6 @@ def main():
             # Memory growth must be set before GPUs have been initialized
             print(e)
 
-    # Variables for training and testing
-    train = False
-    model_path = "ep-550.model"
-    use_old_model = True  # For loading model for training
-
     # Constants
     GAMMA   = 0.9
     EPSILON = .95
@@ -189,6 +191,7 @@ def main():
     TAU = 0.125
     MAX_MEM = 100000
     LEARNING_RATE = 0.005
+    TARGET_UPDATE_INTERVAL = 5
 
     BATCH_SIZE = 32
     
@@ -211,11 +214,11 @@ def main():
     dqn_agent = DQNAgent(env=env, max_mem=MAX_MEM, gamma=GAMMA, epsilon=EPSILON, tau=TAU,
                          batch_size=BATCH_SIZE, learning_rate=LEARNING_RATE)
 
-    if train:
+    if args.train:
         episode = 0
-        if use_old_model:
-            dqn_agent.load_model(model_path)
-            episode = int(model_path.split('.')[0].split('-')[-1]) + 1
+        if args.use_old_model:
+            dqn_agent.load_model(args.model_path)
+            episode = int(args.model_path.split('.')[0].split('-')[-1]) + 1
             print(f"Loading model from episode {episode - 1}, starting one ahead")
         # Run episodes
         while episode < EPISODES:
@@ -234,12 +237,16 @@ def main():
                 start = time.time()
                 dqn_agent.remember(obs, action, reward, next_obs, done)
                 rem_dt = time.time() - start
+
                 start = time.time()
                 dqn_agent.replay()
                 rep_dt = time.time() - start
-                start = time.time()
-                dqn_agent.target_train()
-                targ_dt = time.time() - start
+
+                targ_dt = 0
+                if step % TARGET_UPDATE_INTERVAL == 0:
+                    start = time.time()
+                    dqn_agent.target_train()
+                    targ_dt = time.time() - start
 
                 curr_pos = info["curr_pos"]
                 distance = info["distance"]
@@ -263,8 +270,8 @@ def main():
                 dqn_agent.save_model("ep-{}.model".format(episode))
             episode += 1
     else: # TEST
-        print(f"Runing tests with model from {model_path}")
-        dqn_agent.load_model(model_path)
+        print(f"Runing tests with model from {args.model_path}")
+        dqn_agent.load_model(args.model_path)
         step = 0
         obs = env.reset()
         env.client.startRecording()

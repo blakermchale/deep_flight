@@ -2,6 +2,8 @@ import airsim
 from airsim import MultirotorClient, YawMode, DrivetrainType
 from PIL import Image
 import numpy as np
+import time
+from scipy.spatial.transform import Rotation as R
 
 class MyAirSimClient(MultirotorClient):
     """
@@ -20,6 +22,8 @@ class MyAirSimClient(MultirotorClient):
         self.home_orientation = self.getMultirotorState(vehicle_name=self.vehicle_name).kinematics_estimated.orientation
         self.home = np.array([self.home_pos.x_val, self.home_pos.y_val, self.home_pos.z_val])
 
+        self.curr_vel = np.zeros((1,3))
+
     def sim_reset(self):
         """
         Resets drone in simulation and takes off.
@@ -28,24 +32,6 @@ class MyAirSimClient(MultirotorClient):
         self.enableApiControl(True, vehicle_name=self.vehicle_name)
         self.armDisarm(True, vehicle_name=self.vehicle_name)
         self.moveToZAsync(-2, 0.5, vehicle_name=self.vehicle_name).join()
-
-    def modifyVel(self, offset):
-        """
-        Modify velocity by specified offset.
-
-        Args:
-            offset (tuple(double, double, double, double)): x, y, z, yaw rate
-
-        """
-        vx, vy, vz, yaw_rate = offset
-        yaw_mode = YawMode(is_rate=True, yaw_or_rate=yaw_rate)
-
-        curr_vel = self.getMultirotorState(vehicle_name=self.vehicle_name).kinematics_estimated.linear_velocity
-        vx += curr_vel.x_val
-        vy += curr_vel.y_val
-        vz += curr_vel.z_val
-        
-        self.moveByVelocityAsync(vx , vy, vz, 1.0, yaw_mode=yaw_mode, vehicle_name=self.vehicle_name).join()
 
     def getDepthImage(self):
         """
@@ -79,3 +65,46 @@ class MyAirSimClient(MultirotorClient):
         has_collided = self.simGetCollisionInfo().has_collided
 
         return has_collided, curr_pos
+
+    def modifyVel(self, vel_offset, yaw_rate):     
+        """
+        Modify velocity by specified offset and a given yaw rate.
+
+        Args:
+            vel_offset (double): forward velocity offset m/s
+            yaw_rate (double): the yaw rate in deg/s
+        Returns:
+            has_collided (bool): while taking the action, has the drone collided
+        """
+
+        state = self.getMultirotorState(vehicle_name=self.vehicle_name).kinematics_estimated
+        quat = state.orientation.to_numpy_array()
+        self.curr_vel += vel_offset
+
+        r = R.from_quat(quat)
+        rpy = r.as_euler('XYZ', degrees=True)
+        yaw = rpy[2]
+
+        speed = np.linalg.norm(self.curr_vel[:2])
+        vx = np.cos(yaw) * speed
+        vy = np.sin(yaw) * speed
+
+        yaw_mode = YawMode(is_rate=True, yaw_or_rate=yaw_rate)
+
+        start = time.time()
+        self.moveByVelocityZAsync(vx, vy, -2, 1.0, yaw_mode=yaw_mode, vehicle_name=self.vehicle_name).join()
+        
+        # TODO:check if the drone has collided while performing the action,not 1:1 w/ high clock
+        has_collided = False  
+        dur = time.time() - start
+        # print(dur)
+        while 1.5/100 > dur:
+            # print(dur)
+            has_collided, _ = self.getState()
+            if has_collided:
+                break
+
+            dur = time.time() - start
+   
+        return has_collided
+        
