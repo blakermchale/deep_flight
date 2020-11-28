@@ -29,9 +29,12 @@ class MyAirSimClient(MultirotorClient):
         Resets drone in simulation and takes off.
         """
         self.reset()
+        self.curr_vel = np.zeros((1,3))
+        self.simPause(False)
         self.enableApiControl(True, vehicle_name=self.vehicle_name)
         self.armDisarm(True, vehicle_name=self.vehicle_name)
         self.moveToZAsync(-2, 0.5, vehicle_name=self.vehicle_name).join()
+        self.simPause(True)
 
     def getDepthImage(self):
         """
@@ -73,8 +76,6 @@ class MyAirSimClient(MultirotorClient):
         Args:
             vel_offset (double): forward velocity offset m/s
             yaw_rate (double): the yaw rate in deg/s
-        Returns:
-            has_collided (bool): while taking the action, has the drone collided
         """
 
         state = self.getMultirotorState(vehicle_name=self.vehicle_name).kinematics_estimated
@@ -90,21 +91,5 @@ class MyAirSimClient(MultirotorClient):
         vy = np.sin(yaw) * speed
 
         yaw_mode = YawMode(is_rate=True, yaw_or_rate=yaw_rate)
-
-        start = time.time()
-        self.moveByVelocityZAsync(vx, vy, -2, 1.0, yaw_mode=yaw_mode, vehicle_name=self.vehicle_name).join()
-        
-        # TODO:check if the drone has collided while performing the action,not 1:1 w/ high clock
-        has_collided = False  
-        dur = time.time() - start
-        # print(dur)
-        while 1.5/100 > dur:
-            # print(dur)
-            has_collided, _ = self.getState()
-            if has_collided:
-                break
-
-            dur = time.time() - start
-   
-        return has_collided
+        cmd = self.moveByVelocityZAsync(vx, vy, -2, 1.0, yaw_mode=yaw_mode, vehicle_name=self.vehicle_name).join()
         

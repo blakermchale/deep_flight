@@ -53,13 +53,12 @@ class AirSimEnv(gym.Env):
         info = {}
         velOffsetCmd, yaw_rate = self.interpret_action(action)
 
-        #TODO: freezes after some steps w/ pause function
-        # self.client.simPause(False)
-        has_collided = self.client.modifyVel(velOffsetCmd, yaw_rate)
-        # self.client.simPause(True)
+        self.client.simPause(False)
+        self.client.modifyVel(velOffsetCmd, yaw_rate)
 
         observation = self.client.getDepthImage()
-        reward, done, info = self.compute_reward(has_collided)
+        reward, done, info = self.compute_reward()
+        self.client.simPause(True)
 
         return observation, reward, done, info
         
@@ -68,14 +67,12 @@ class AirSimEnv(gym.Env):
         Resets the state of the environment and returns an initial observation.
         """
         self.client.sim_reset()
-        self.client.curr_vel = np.zeros((1,3))
         return self.client.getDepthImage()
 
-    def compute_reward(self, has_collided):
+    def compute_reward(self):
         """
         Computes reward for current state.
-        Args:
-            has_collided: (bool): flag returned after taking action if drone collided
+
         Returns:
             reward (float): reward for current state
             done (bool): True if the vehicle has collided or near the goal
@@ -86,6 +83,11 @@ class AirSimEnv(gym.Env):
         done = False
         reward = 0
         distance = np.nan
+
+        collision_info = self.client.simGetCollisionInfo()
+        has_collided = collision_info.has_collided or (collision_info.time_stamp != 0)
+        # print(collision_info.has_collided, collision_info.time_stamp)
+
         if has_collided:
             reward = self.COLLISION_REWARD
             done = True
