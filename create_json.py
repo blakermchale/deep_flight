@@ -19,4 +19,7 @@ df2 = create_df("training_results_final_351_406")[:50]
 df2["timestamps"] += df1["timestamps"].iloc[-1]
 df3 = create_df("training_results_401_660")[:250]
 df3["timestamps"] += df2["timestamps"].iloc[-1]
-df = pd.concat([df1, df2, df3]).reset_index()
+df = pd.concat([df1, df2, df3]).reset_index(drop=True)
+
+df["steps"] = df["episode_lengths"].cumsum()
+df.to_json("training_results_final.json")
