@@ -7,6 +7,8 @@ Professor Gold
 
 ## Install
 
+Setup AirSim with Unreal Engine 4.24 from their [tutorial](https://microsoft.github.io/AirSim/build_windows/)
+
 ``` bash
 sudo apt install git-lfs
 git lfs install

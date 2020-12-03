@@ -27,7 +27,7 @@ class AirSimEnv(gym.Env):
 
     def __init__(self):
         self.client = MyAirSimClient()
-        self.goal = np.array([10., 10., -3.])
+        self.goal = np.array([72.214,  -3.348, -2.])
 
         # Gym needs a defined object structure for observations and actions
         self.observation_space = spaces.Box(low=0, high=255, shape=(84,84, 1))

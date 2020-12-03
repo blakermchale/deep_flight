@@ -92,7 +92,7 @@ class DQNAgent:
         Q value.
         """
         # wait until enough actions have been performed to train the model
-        if len(self.memory) < self.batch_size:
+        if len(self.memory) < self.batch_size*8:
             return
 
         samples = random.sample(self.memory, self.batch_size)
@@ -168,7 +168,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--train", default='True', type=eval, choices=[True, False], help="Flag to test the model instead of train.")
     parser.add_argument("--use_old_model", default='True', type=eval, choices=[True, False], help="Flag to start training/testing with a given model")
-    parser.add_argument("--model_path", default='ep-550.model', help="Path to the model to be loaded for testing/training")
+    parser.add_argument("--model_path", default='ep-650.model', help="Path to the model to be loaded for testing/training")
     args = parser.parse_args()
 
     # allow for GPU on windows
@@ -187,7 +187,7 @@ def main():
     # Constants
     GAMMA   = 0.9
     EPSILON = .95
-    EPSILON_DECAY = 0.995
+    EPSILON_DECAY = 0.99995
     TAU = 0.125
     MAX_MEM = 100000
     LEARNING_RATE = 0.005
@@ -195,7 +195,7 @@ def main():
 
     BATCH_SIZE = 32
     
-    EPISODES  = 1000
+    EPISODES  = 10000
     # STEPS = 500
 
     OUT_DIR = "training_results/"
@@ -208,11 +208,12 @@ def main():
     STEPS = env.spec.max_episode_steps - 1 
 
     # Set goal
-    env.goal = np.array([72.214,  -3.348, -3.])
+    env.goal = np.array([72.214,  -3.348, -2.])
 
     # Create deep q-learning agent
     dqn_agent = DQNAgent(env=env, max_mem=MAX_MEM, gamma=GAMMA, epsilon=EPSILON, tau=TAU,
-                         batch_size=BATCH_SIZE, learning_rate=LEARNING_RATE)
+                         epsilon_decay=EPSILON_DECAY, batch_size=BATCH_SIZE, 
+                         learning_rate=LEARNING_RATE)
 
     if args.train:
         episode = 0
@@ -251,9 +252,9 @@ def main():
                 curr_pos = info["curr_pos"]
                 distance = info["distance"]
                 has_collided = info["has_collided"]
-                print(f"Step: {step:03d} Action: {action.name:10} Reward: {reward:+7.2f} "
+                print(f"Step: {step:03d} Action: {action.name:15} Reward: {reward:+7.2f} "
                     f"Position: ({curr_pos[0]:+6.2f}, {curr_pos[1]:+6.2f}, {curr_pos[2]:+6.2f}) "
-                    f"Distance: {distance:+6.2f} "
+                    f"Distance: {distance:+6.2f} EPS: {dqn_agent.epsilon:.2f} "
                     f"Collided: {has_collided} REM DT: {rem_dt:.2f} REP DT: {rep_dt:.2f} TARG DT: {targ_dt:.2f}", end='\r')
 
                 if step >= STEPS:
