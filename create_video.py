@@ -1,12 +1,10 @@
 import cv2
 import os
 from pathlib import Path
-
-# Read in airsim recording data from test
 import glob
-import os
 
-airsim_dir = Path.home().joinpath("Documents").joinpath("AirSim")  # .joinpath("2020-11-23-23-48-57")
+# Read in most recent airsim recording data from test
+airsim_dir = Path.home().joinpath("Documents").joinpath("AirSim")
 list_of_files = glob.glob(str(airsim_dir.joinpath('*')) + '/') # * means all if need specific format then *.csv
 latest_file = max(list_of_files, key=os.path.getctime)
 

@@ -14,7 +14,6 @@ from gym_airsim.envs.airsim_env import Action
 
 
 class DQNAgent:
-    # TODO: add in load model functionallity to save/load successful previous models and test
     def __init__(self, env, max_mem=100000, epsilon=0.95, gamma=0.9, epsilon_decay=0.995, 
                  learning_rate=0.005, tau=0.125, batch_size=32):
         self.env = env
@@ -100,35 +99,14 @@ class DQNAgent:
         target_lst = []
         for sample in samples:
             obs, action, reward, next_obs, done = sample
-            # obs_lst.append(obs)
-            
-            # print("obs shape (%f,%f)\n" % (obs.shape[0], obs.shape[1]))
-            # print("next_obs shape (%f,%f)\n" % (next_obs.shape[0], next_obs.shape[1]))
-
-            # write to png 
-            # import os
-            # import airsim
-            # airsim.write_png(os.path.normpath('image.png'), obs.reshape(84,84)) 
-
-            # start = time.time()
             target = self.target_model.predict(obs)
-            # predict_dt = time.time() - start
             if done:
                 target[0][action.value] = reward
             else:
                 # bellman update equation
                 next_Q = max(self.target_model.predict(next_obs)[0])
                 target[0][action.value] = reward + next_Q * self.gamma
-            # start = time.time()
             self.model.fit(obs, target, epochs=1, verbose=0)
-            # fit_dt = time.time() - start
-            # print(f"Predict DT: {predict_dt:.2f}, Fit DT: {fit_dt:.2f}")
-            # target_lst.append(target)
-        # start = time.time()
-        # self.model.train_on_batch(obs_lst, target_lst)
-        # fit_dt = time.time() - start
-        # print(f"Fit DT: {fit_dt:.2f}")
-
 
     def target_train(self):
         """
@@ -196,15 +174,12 @@ def main():
     BATCH_SIZE = 32
     
     EPISODES  = 10000
-    # STEPS = 500
 
     OUT_DIR = "training_results/"
 
     # Create gym environment
     env = gym.make("gym_airsim:airsim-v0")
     env = gym.wrappers.Monitor(env, OUT_DIR, force=True)
-     # TODO: Is this needed?
-     #  Currently needed since gym monitor wrapper requires that an env reach a done state to reset
     STEPS = env.spec.max_episode_steps - 1 
 
     # Set goal
