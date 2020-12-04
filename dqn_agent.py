@@ -91,7 +91,7 @@ class DQNAgent:
         Q value.
         """
         # wait until enough actions have been performed to train the model
-        if len(self.memory) < self.batch_size*8:
+        if len(self.memory) < self.batch_size*16:
             return
 
         samples = random.sample(self.memory, self.batch_size)

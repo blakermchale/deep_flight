@@ -22,7 +22,7 @@ class AirSimEnv(gym.Env):
 
     GOAL_REWARD = 1000.
     COLLISION_REWARD = -1000.
-    MAX_DIST_REWARD = 750.
+    MAX_DIST_REWARD = 100.
     DIST_THRESH = 1.0
 
     def __init__(self):
