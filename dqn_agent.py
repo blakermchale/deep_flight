@@ -91,7 +91,7 @@ class DQNAgent:
         Q value.
         """
         # wait until enough actions have been performed to train the model
-        if len(self.memory) < self.batch_size*16:
+        if len(self.memory) < self.batch_size:
             return
 
         samples = random.sample(self.memory, self.batch_size)
@@ -145,8 +145,12 @@ class DQNAgent:
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--train", default='True', type=eval, choices=[True, False], help="Flag to test the model instead of train.")
-    parser.add_argument("--use_old_model", default='True', type=eval, choices=[True, False], help="Flag to start training/testing with a given model")
-    parser.add_argument("--model_path", default='ep-650.model', help="Path to the model to be loaded for testing/training")
+    parser.add_argument("-old", "--use_old_model", default='True', type=eval, choices=[True, False], help="Flag to start training/testing with a given model")
+    parser.add_argument("-mp", "--model_path", default='ep-1650.model', help="Path to the model to be loaded for testing/training")
+    parser.add_argument("-e", "--epsilon", default=0.95, type=float, help="Starting explore space value")
+    parser.add_argument("-ed", "--epsilon_decay", default=0.99995, type=float, help="Percentage by which epsilon changes every action")
+    parser.add_argument("-mm", "--max_memory", default=100000, type=int, help="Max amount of memory stored in DQN for predictions")
+    parser.add_argument("-lr", "--learning_rate", default=0.005, type=float, help="Learning rate of neural network")
     args = parser.parse_args()
 
     # allow for GPU on windows
@@ -164,11 +168,11 @@ def main():
 
     # Constants
     GAMMA   = 0.9
-    EPSILON = .95
-    EPSILON_DECAY = 0.99995
+    EPSILON = args.epsilon
+    EPSILON_DECAY = args.epsilon_decay
     TAU = 0.125
-    MAX_MEM = 100000
-    LEARNING_RATE = 0.005
+    MAX_MEM = args.max_memory
+    LEARNING_RATE = args.learning_rate
     TARGET_UPDATE_INTERVAL = 5
 
     BATCH_SIZE = 32
@@ -190,6 +194,7 @@ def main():
                          epsilon_decay=EPSILON_DECAY, batch_size=BATCH_SIZE, 
                          learning_rate=LEARNING_RATE)
 
+    # env.client.simPause(False)
     if args.train:
         episode = 0
         if args.use_old_model:
@@ -231,6 +236,8 @@ def main():
                     f"Position: ({curr_pos[0]:+6.2f}, {curr_pos[1]:+6.2f}, {curr_pos[2]:+6.2f}) "
                     f"Distance: {distance:+6.2f} EPS: {dqn_agent.epsilon:.2f} "
                     f"Collided: {has_collided} REM DT: {rem_dt:.2f} REP DT: {rep_dt:.2f} TARG DT: {targ_dt:.2f}", end='\r')
+                
+                # time.sleep(200)
 
                 if step >= STEPS:
                     print(f"\nReached max # of steps")

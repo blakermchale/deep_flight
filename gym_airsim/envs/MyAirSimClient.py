@@ -15,6 +15,8 @@ class MyAirSimClient(MultirotorClient):
         self.enableApiControl(True)
         self.armDisarm(True)
 
+        self.takeoff_alt = -2
+
         self.vehicle_name = "SimpleFlight"
         self.camera_name = "front_center_custom"
         
@@ -33,7 +35,7 @@ class MyAirSimClient(MultirotorClient):
         self.simPause(False)
         self.enableApiControl(True, vehicle_name=self.vehicle_name)
         self.armDisarm(True, vehicle_name=self.vehicle_name)
-        self.moveToZAsync(-2, 0.5, vehicle_name=self.vehicle_name).join()
+        self.moveToZAsync(self.takeoff_alt, 0.5, vehicle_name=self.vehicle_name).join()
         self.simPause(True)
 
     def getDepthImage(self):
@@ -91,5 +93,5 @@ class MyAirSimClient(MultirotorClient):
         vy = np.sin(yaw) * speed
 
         yaw_mode = YawMode(is_rate=True, yaw_or_rate=yaw_rate)
-        cmd = self.moveByVelocityZAsync(vx, vy, -2, 1.0, yaw_mode=yaw_mode, vehicle_name=self.vehicle_name).join()
+        cmd = self.moveByVelocityZAsync(vx, vy, self.takeoff_alt, 1.0, yaw_mode=yaw_mode, vehicle_name=self.vehicle_name).join()
         

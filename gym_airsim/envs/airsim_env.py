@@ -13,10 +13,9 @@ from gym_airsim.envs.MyAirSimClient import MyAirSimClient
 logger = logging.getLogger(__name__)
 
 class Action(IntEnum):
-    INC_FORWARD_VEL = 0
-    DEC_FORWARD_VEL = 1 
-    YAW_LEFT = 2 
-    YAW_RIGHT = 3
+    MOVE_POS_X = 0
+    MOVE_POS_Y = 1 
+    MOVE_NEG_Y = 2
 
 class AirSimEnv(gym.Env):
 
@@ -31,7 +30,7 @@ class AirSimEnv(gym.Env):
 
         # Gym needs a defined object structure for observations and actions
         self.observation_space = spaces.Box(low=0, high=255, shape=(84,84, 1))
-        self.action_space = spaces.Discrete(4)
+        self.action_space = spaces.Discrete(3)
         
     def seed(self, seed=None):
         self.np_random, seed = seeding.np_random(seed)
@@ -51,10 +50,13 @@ class AirSimEnv(gym.Env):
             info (dict): contains auxiliary diagnostic information (helpful for debugging, and sometimes learning)
         """
         info = {}
-        velOffsetCmd, yaw_rate = self.interpret_action(action)
+        # velOffsetCmd, yaw_rate = self.interpret_action(action)
+        new_x, new_y = self.interpret_action(action)
 
         self.client.simPause(False)
-        self.client.modifyVel(velOffsetCmd, yaw_rate)
+        # self.client.modifyVel(velOffsetCmd, yaw_rate)
+        self.client.moveToPositionAsync(new_x, new_y, self.client.takeoff_alt, 1.0, vehicle_name=self.client.vehicle_name).join()
+        # self.client.moveByVelocityZAsync(new_x, new_y, self.client.takeoff_alt, 1.0, vehicle_name=self.client.vehicle_name).join()
 
         observation = self.client.getDepthImage()
         reward, done, info = self.compute_reward()
@@ -105,6 +107,33 @@ class AirSimEnv(gym.Env):
         info["curr_pos"] = curr_pos
         return reward, done, info
 
+    # def interpret_action(self, action):
+    #     """
+    #     Interpret action enum and return back offset values for velocities and yaw rate.
+
+    #     Args:
+    #         action (Action): enum to chose what action to take
+
+    #     Returns:
+    #         offset (tuple(double, double)): vel offset, yaw rate
+    #     """
+    #     # Actions
+    #     vel_offset = 1 # m/s
+    #     yaw_rate = 15 # deg/s
+
+    #     if action == Action.INC_FORWARD_VEL:
+    #         offset = (vel_offset, 0)
+    #     elif action == Action.DEC_FORWARD_VEL:
+    #         offset = (-vel_offset, 0)
+    #     elif action == Action.YAW_RIGHT:
+    #         offset = (0, yaw_rate)
+    #     elif action == Action.YAW_LEFT:
+    #         offset = (0, -yaw_rate)
+    #     else:
+    #         raise ValueError(f"Action does not exist: {action}")
+
+    #     return offset
+
     def interpret_action(self, action):
         """
         Interpret action enum and return back offset values for velocities and yaw rate.
@@ -118,15 +147,18 @@ class AirSimEnv(gym.Env):
         # Actions
         vel_offset = 1 # m/s
         yaw_rate = 15 # deg/s
+        move = 1.0
 
-        if action == Action.INC_FORWARD_VEL:
-            offset = (vel_offset, 0)
-        elif action == Action.DEC_FORWARD_VEL:
-            offset = (-vel_offset, 0)
-        elif action == Action.YAW_RIGHT:
-            offset = (0, yaw_rate)
-        elif action == Action.YAW_LEFT:
-            offset = (0, -yaw_rate)
+        _, curr_pos = self.client.getState()
+        if action == Action.MOVE_POS_X:
+            offset = (curr_pos[0] + move, curr_pos[1])
+            # offset = (move, 0)
+        elif action == Action.MOVE_POS_Y:
+            offset = (curr_pos[0], curr_pos[1] + move)
+            # offset = (0, move)
+        elif action == Action.MOVE_NEG_Y:
+            offset = (curr_pos[0], curr_pos[1] - move)
+            # offset = (0, move)
         else:
             raise ValueError(f"Action does not exist: {action}")
 
