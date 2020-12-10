@@ -3,7 +3,10 @@
 Final Project for CS4100 Artificial Intelligence  
 Professor Gold
 
-<img src="docs/DeepFlight.png" height="700">
+<img src="docs/DeepFlight.png" height="700">  
+
+<img src="docs/airsim_deepgif.gif" height="300">
+
 
 ## Install
 
